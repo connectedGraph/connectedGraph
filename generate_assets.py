@@ -221,7 +221,7 @@ def generate_typewriter():
   
   <!-- Line 4 & 5: show-profile outputs -->
   <text x="35" y="131" class="output op2">Focus:  Full-Stack AI Applications (Vertical AIED)</text>
-  <text x="35" y="154" class="output op3">Status: yolo ✨</text>
+  <text x="35" y="154" class="output op3">Status: yolo</text>
   
   <!-- Line 6: claude command -->
   <text x="35" y="177" class="code-text prompt pr3">euler~% </text>
@@ -230,7 +230,7 @@ def generate_typewriter():
   <rect x="105" y="163" width="8" height="16" class="cursor cursor3"/>
   
   <!-- Line 7: claude output -->
-  <text x="35" y="200" class="output op4" fill="#bb9af3">🔓 [Danger Mode] Skipping permissions... Let's build!</text>
+  <text x="35" y="200" class="output op4" fill="#bb9af3">[Danger Mode] Skipping permissions... Let's build!</text>
   
   <!-- Line 8: codex command -->
   <text x="35" y="223" class="code-text prompt pr4">euler~% </text>
@@ -239,7 +239,7 @@ def generate_typewriter():
   <rect x="105" y="209" width="8" height="16" class="cursor cursor4"/>
   
   <!-- Line 9: codex output -->
-  <text x="35" y="246" class="output op5" fill="#e0af68">⚡ [YOLO Mode] Code generation full speed ahead!</text>
+  <text x="35" y="246" class="output op5" fill="#f7768e">[YOLO Mode] Code generation full speed ahead!</text>
 </svg>
 """
     with open("typewriter.svg", "w", encoding="utf-8") as f:
