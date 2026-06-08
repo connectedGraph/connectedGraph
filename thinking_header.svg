@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="35" fill="none">
+  <style>
+    .container {
+      font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+      font-size: 13px;
+      font-weight: bold;
+      fill: #bb9af3;
+    }
+    .dots {
+      fill: #7aa2f7;
+    }
+    .thinking-text::after {
+      content: 'Thinking';
+      animation: cycle-words 20s infinite steps(1);
+    }
+    .spinner::before {
+      content: '⠋';
+      animation: cycle-spinner 2s infinite steps(1);
+    }
+    
+    @keyframes cycle-words {
+      0.0%, 9.9% { content: 'Thinking'; }
+      10.0%, 19.9% { content: 'Loading components'; }
+      20.0%, 29.9% { content: 'Analyzing AIED DuoGrow'; }
+      30.0%, 39.9% { content: 'Configuring Claude Code'; }
+      40.0%, 49.9% { content: 'Parsing 6767.chat APIs'; }
+      50.0%, 59.9% { content: 'Skipping permissions'; }
+      60.0%, 69.9% { content: 'Accelerating YOLO mode'; }
+      70.0%, 79.9% { content: 'Syncing PostgreSQL DB'; }
+      80.0%, 89.9% { content: 'Compiling Next.js pages'; }
+      90.0%, 99.9% { content: 'Deploying SVG graphics'; }
+      100% { content: 'Thinking'; }
+    }
+    
+    @keyframes cycle-spinner {
+      0.0%, 9.9% { content: '⠋'; }
+      10.0%, 19.9% { content: '⠙'; }
+      20.0%, 29.9% { content: '⠹'; }
+      30.0%, 39.9% { content: '⠸'; }
+      40.0%, 49.9% { content: '⠼'; }
+      50.0%, 59.9% { content: '⠴'; }
+      60.0%, 69.9% { content: '⠦'; }
+      70.0%, 79.9% { content: '⠧'; }
+      80.0%, 89.9% { content: '⠇'; }
+      90.0%, 99.9% { content: '⠏'; }
+      100% { content: '⠋'; }
+    }
+  </style>
+
+  <g class="container">
+    <!-- Spinner -->
+    <text x="10" y="22" class="spinner" fill="#7dcfff"></text>
+    
+    <!-- Text and animated ellipses -->
+    <text x="32" y="22">
+      <tspan class="thinking-text" fill="#a9b1d6"></tspan>
+      <tspan class="dots">...</tspan>
+    </text>
+  </g>
+</svg>

@@ -413,6 +413,171 @@ def main():
     generate_header("Ask Me", "header_ask_me.svg", ask_path)
     generate_social_badges()
     generate_tech_stack()
+    generate_thinking_header()
+    generate_avatar()
+
+def generate_thinking_header():
+    # Complete list of vocabulary/roadmap elements from readme
+    words = [
+        "Thinking",
+        "Loading components",
+        "Analyzing AIED DuoGrow",
+        "Configuring Claude Code",
+        "Parsing 6767.chat APIs",
+        "Skipping permissions",
+        "Accelerating YOLO mode",
+        "Syncing PostgreSQL DB",
+        "Compiling Next.js pages",
+        "Deploying SVG graphics"
+    ]
+    
+    # 10 words, 2s each = 20s total loop duration
+    word_keyframes = ""
+    for idx, word in enumerate(words):
+        p_start = idx * 10.0
+        p_end = (idx + 1) * 10.0
+        # Instant state transitions to avoid cross-fade overlap
+        word_keyframes += f"      {p_start}%, {p_end - 0.1}% {{ content: '{word}'; }}\n"
+    # Ensure final frame matches start to loop smoothly
+    word_keyframes += "      100% { content: '" + words[0] + "'; }"
+
+    # Spinner symbols: 0.2s per step. A 20-step loop fits exactly into 4s total. We repeat the 4s spinner loop across the 20s cycle.
+    spinner_symbols = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
+    spinner_keyframes = ""
+    steps_count = len(spinner_symbols)
+    for idx, char in enumerate(spinner_symbols):
+        p_start = (idx / steps_count) * 100.0
+        p_next = ((idx + 1) / steps_count) * 100.0
+        spinner_keyframes += f"      {p_start}%, {p_next - 0.1}% {{ content: '{char}'; }}\n"
+    spinner_keyframes += "      100% { content: '" + spinner_symbols[0] + "'; }"
+
+    content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="300" height="35" fill="none">
+  <style>
+    .container {{
+      font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+      font-size: 13px;
+      font-weight: bold;
+      fill: #bb9af3;
+    }}
+    .dots {{
+      fill: #7aa2f7;
+    }}
+    .thinking-text::after {{
+      content: '{words[0]}';
+      animation: cycle-words 20s infinite steps(1);
+    }}
+    .spinner::before {{
+      content: '{spinner_symbols[0]}';
+      animation: cycle-spinner 2s infinite steps(1);
+    }}
+    
+    @keyframes cycle-words {{
+{word_keyframes}
+    }}
+    
+    @keyframes cycle-spinner {{
+{spinner_keyframes}
+    }}
+  </style>
+
+  <g class="container">
+    <!-- Spinner -->
+    <text x="10" y="22" class="spinner" fill="#7dcfff"></text>
+    
+    <!-- Text and animated ellipses -->
+    <text x="32" y="22">
+      <tspan class="thinking-text" fill="#a9b1d6"></tspan>
+      <tspan class="dots">...</tspan>
+    </text>
+  </g>
+</svg>
+"""
+    with open("thinking_header.svg", "w", encoding="utf-8") as f:
+        f.write(content)
+    print("Generated thinking_header.svg")
+
+def generate_avatar():
+    # We will embed the local avatar.jpg by wrapping it inside an SVG pattern mask
+    content = """<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none">
+  <defs>
+    <!-- Shadow filters for realistic glass depth -->
+    <filter id="avatar-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    
+    <!-- Pattern to mask the local avatar.jpg image inside the circular path -->
+    <pattern id="avatar-pattern" x="0" y="0" width="1" height="1" patternUnits="objectBoundingBox">
+      <image href="./avatar.jpg" x="0" y="0" width="120" height="120" preserveAspectRatio="xMidYMid slice"/>
+    </pattern>
+  </defs>
+
+  <style>
+    /* Pulsing Bubble/Ring animations */
+    .bubble-ring-1 {
+      stroke: #7aa2f7;
+      stroke-width: 1.5px;
+      opacity: 0.85;
+      transform-origin: 80px 80px;
+      animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+    
+    .bubble-ring-2 {
+      stroke: #bb9af3;
+      stroke-width: 1.2px;
+      opacity: 0.6;
+      transform-origin: 80px 80px;
+      animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      animation-delay: 1.3s;
+    }
+    
+    .bubble-ring-3 {
+      stroke: #7dcfff;
+      stroke-width: 1px;
+      opacity: 0.35;
+      transform-origin: 80px 80px;
+      animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      animation-delay: 2.6s;
+    }
+    
+    .avatar-border {
+      stroke: #7aa2f7;
+      stroke-width: 3.5px;
+      transition: stroke 0.3s ease;
+    }
+    
+    .avatar-container:hover .avatar-border {
+      stroke: #bb9af3;
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(0.74);
+        opacity: 0.85;
+      }
+      80%, 100% {
+        transform: scale(0.97);
+        opacity: 0;
+      }
+    }
+  </style>
+
+  <!-- Animated Bubble Rings -->
+  <circle cx="80" cy="80" r="76" class="bubble-ring-3"/>
+  <circle cx="80" cy="80" r="76" class="bubble-ring-2"/>
+  <circle cx="80" cy="80" r="76" class="bubble-ring-1"/>
+
+  <!-- Avatar Group -->
+  <g class="avatar-container" filter="url(#avatar-shadow)">
+    <!-- Main Image circle with 120px diameter (60px radius) -->
+    <circle cx="80" cy="80" r="60" fill="url(#avatar-pattern)" />
+    <!-- Overlay Border -->
+    <circle cx="80" cy="80" r="60" fill="none" class="avatar-border" />
+  </g>
+</svg>
+"""
+    with open("avatar_animated.svg", "w", encoding="utf-8") as f:
+        f.write(content)
+    print("Generated avatar_animated.svg")
 
 if __name__ == "__main__":
     main()

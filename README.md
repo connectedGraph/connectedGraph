@@ -1,11 +1,13 @@
 <div align="center">
 
 <!-- Avatar -->
-<img src="./avatar.jpg" width="120" height="120" style="border-radius: 50%; border: 3px solid #7aa2f7; box-shadow: 0 4px 20px rgba(0,0,0,0.35);" alt="Euler Rap Avatar" />
+<img src="./avatar_animated.svg" width="160" height="160" alt="Euler Rap Animated Avatar" />
 
 ### Hi there, I'm **Euler Rap** (connectedGraph) 👋
 
 > INTP &bull; Project-Driven Learner &bull; Full-Stack AI Application Developer &bull; AI in Education (AIED)
+
+<img src="./thinking_header.svg" width="300" height="35" alt="Thinking status" />
 
 <!-- Social Badges -->
 <a href="https://6767.chat"><img src="./badge_website.svg" alt="Website" /></a>
