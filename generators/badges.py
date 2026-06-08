@@ -57,11 +57,17 @@ def generate_social_badges(output_dir=".", theme="dark"):
             
         badge_color = color_map.get(color, color) if theme == "light" else color
             
+        subfolder = ""
+        if local_name in ["qq", "zhihu"]:
+            subfolder = "contact"
+        elif local_name == "codex":
+            subfolder = "devtools"
+            
         import os
-        has_local = os.path.exists(os.path.join("icon svg", f"{local_name}.svg"))
+        has_local = os.path.exists(os.path.join("icon svg", subfolder, f"{local_name}.svg"))
         
         if has_local:
-            loaded_svg = load_icon_svg(local_name, icon_svg, color=badge_color, theme=theme)
+            loaded_svg = load_icon_svg(local_name, icon_svg, subfolder=subfolder, color=badge_color, theme=theme)
             if is_fill:
                 icon_content = f'<g fill="{badge_color}">{loaded_svg}</g>'
             else:
