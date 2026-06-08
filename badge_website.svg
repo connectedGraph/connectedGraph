@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="108" height="28" fill="none">
   <rect x="0.5" y="0.5" width="107" height="27" rx="14" fill="#16161e" stroke="#24283b" stroke-width="1"/>
-  <g transform="translate(8, 6)">
+  <g transform="translate(12.0, 6)">
     <g stroke="#7dcfff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c1.5 2 1.5 11 0 13M8 1.5c-1.5 2-1.5 11 0 13"/></g>
   </g>
-  <text x="30" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#c0caf5">6767.chat</text>
+  <text x="34.0" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#c0caf5">6767.chat</text>
 </svg>
