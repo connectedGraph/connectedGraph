@@ -49,16 +49,37 @@ def load_icon_svg(name, default_svg, subfolder="", target_size=16, color=None):
             inner_content = inner_content.replace(f'url(#{id_val})', f'url(#{new_id})')
             inner_content = inner_content.replace(f'url(\'#{id_val}\')', f'url(\'#{new_id}\')')
             
+        # Extract fill and stroke from the <svg ...> tag
+        svg_tag_match = re.search(r'<svg([^>]*)>', content)
+        svg_tag_attrs = svg_tag_match.group(1) if svg_tag_match else ""
+        
+        svg_fill_match = re.search(r'fill="([^"]+)"', svg_tag_attrs)
+        svg_stroke_match = re.search(r'stroke="([^"]+)"', svg_tag_attrs)
+        
+        svg_fill = svg_fill_match.group(1) if svg_fill_match else None
+        svg_stroke = svg_stroke_match.group(1) if svg_stroke_match else None
+        
         # If color is specified, we make the icon themed/monochrome by stripping explicit black/currentColors
         if color:
             inner_content = re.sub(r'stroke="(?:#000000|#000|currentColor)"', '', inner_content)
             inner_content = re.sub(r'fill="(?:#000000|#000|currentColor)"', '', inner_content)
+            g_fill = None
+            g_stroke = None
+        else:
+            g_fill = svg_fill
+            g_stroke = svg_stroke
             
         transform_str = f"scale({scale:.5f})"
         if vx != 0 or vy != 0:
             transform_str = f"scale({scale:.5f}) translate({-vx:.5f}, {-vy:.5f})"
             
-        return f'<g transform="{transform_str}">{inner_content}</g>'
+        g_attrs = f'transform="{transform_str}"'
+        if g_fill:
+            g_attrs += f' fill="{g_fill}"'
+        if g_stroke:
+            g_attrs += f' stroke="{g_stroke}"'
+            
+        return f'<g {g_attrs}>{inner_content}</g>'
     except Exception as e:
         print(f"Error loading {filepath}: {e}")
         return default_svg
