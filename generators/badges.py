@@ -1,4 +1,4 @@
-from generators import load_icon_svg
+from generators import load_icon_svg, clear_collected_defs, get_collected_defs
 
 def generate_social_badges():
     # Globe icon (stroke-based)
@@ -33,6 +33,7 @@ def generate_social_badges():
     }
 
     for filename, width, icon_svg, color, label, is_fill in badges:
+        clear_collected_defs()
         local_name = label.lower()
         if local_name == "6767.chat":
             local_name = "website"
@@ -58,7 +59,10 @@ def generate_social_badges():
         start_x = (width - content_w) / 2
         text_x = start_x + 16 + 6
         
-        svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="28" fill="none">
+        badge_defs = get_collected_defs()
+        defs_block = f"\n  <defs>\n{badge_defs}\n  </defs>" if badge_defs else ""
+        
+        svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="28" fill="none">{defs_block}
   <rect x="0.5" y="0.5" width="{width - 1}" height="27" rx="14" fill="#16161e" stroke="#24283b" stroke-width="1"/>
   <g transform="translate({start_x:.1f}, 6)">
     {icon_content}

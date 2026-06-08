@@ -1,6 +1,7 @@
-from generators import load_icon_svg
+from generators import load_icon_svg, clear_collected_defs, get_collected_defs
 
 def generate_tech_stack():
+    clear_collected_defs()
     # Icons for tech stack
     nextjs_default = '<path d="M1 15V1M1 1L15 15M15 15V1" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
     nextjs_icon = load_icon_svg("nextjs", nextjs_default, "code")
@@ -95,6 +96,7 @@ def generate_tech_stack():
       <stop offset="0%" stop-color="#7aa2f7"/>
       <stop offset="100%" stop-color="#bb9af3"/>
     </linearGradient>
+    {get_collected_defs()}
   </defs>
 
   <!-- Background Card -->

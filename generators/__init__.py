@@ -3,7 +3,17 @@
 import os
 import re
 
+collected_defs = []
+
+def clear_collected_defs():
+    global collected_defs
+    collected_defs = []
+
+def get_collected_defs():
+    return "\n".join(collected_defs)
+
 def load_icon_svg(name, default_svg, subfolder="", target_size=16, color=None):
+    global collected_defs
     filepath = os.path.join("icon svg", subfolder, f"{name}.svg")
     if not os.path.exists(filepath):
         return default_svg
@@ -49,6 +59,14 @@ def load_icon_svg(name, default_svg, subfolder="", target_size=16, color=None):
             inner_content = inner_content.replace(f'url(#{id_val})', f'url(#{new_id})')
             inner_content = inner_content.replace(f'url(\'#{id_val}\')', f'url(\'#{new_id}\')')
             
+        # Extract nested <defs> content, clean it, and store globally
+        defs_matches = re.findall(r'<defs>(.*?)</defs>', inner_content, re.DOTALL)
+        for defs_content in defs_matches:
+            collected_defs.append(defs_content.strip())
+            
+        # Strip <defs> from inner_content to avoid nested defs tags
+        inner_content = re.sub(r'<defs>.*?</defs>', '', inner_content, flags=re.DOTALL)
+        
         # Extract fill and stroke from the <svg ...> tag
         svg_tag_match = re.search(r'<svg([^>]*)>', content)
         svg_tag_attrs = svg_tag_match.group(1) if svg_tag_match else ""
