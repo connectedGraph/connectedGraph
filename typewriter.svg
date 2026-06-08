@@ -3,22 +3,6 @@
     <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
       <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.55"/>
     </filter>
-    
-    <clipPath id="clip1">
-      <rect x="105" y="48" height="20" class="clip-rect-1"/>
-    </clipPath>
-    
-    <clipPath id="clip2">
-      <rect x="105" y="94" height="20" class="clip-rect-2"/>
-    </clipPath>
-    
-    <clipPath id="clip3">
-      <rect x="105" y="163" height="20" class="clip-rect-3"/>
-    </clipPath>
-    
-    <clipPath id="clip4">
-      <rect x="105" y="209" height="20" class="clip-rect-4"/>
-    </clipPath>
   </defs>
 
   <style>
@@ -70,35 +54,35 @@
       fill: #787c99;
     }
     
-    /* Clip Rects CSS Animations (locks typing to CSS clock) */
-    .clip-rect-1 {
-      animation: type1-anim 12s infinite linear;
+    /* Sliding Mask Rects (locked to cursor keyframes) */
+    .mask-rect-1 {
+      animation: mask1-anim 12s infinite linear;
     }
-    .clip-rect-2 {
-      animation: type2-anim 12s infinite linear;
+    .mask-rect-2 {
+      animation: mask2-anim 12s infinite linear;
     }
-    .clip-rect-3 {
-      animation: type3-anim 12s infinite linear;
+    .mask-rect-3 {
+      animation: mask3-anim 12s infinite linear;
     }
-    .clip-rect-4 {
-      animation: type4-anim 12s infinite linear;
+    .mask-rect-4 {
+      animation: mask4-anim 12s infinite linear;
     }
     
-    @keyframes type1-anim {
-      0%, 4.17% { width: 0; }
-      15.0%, 100% { width: 230px; }
+    @keyframes mask1-anim {
+      0%, 4.17% { transform: translateX(0); }
+      15.0%, 100% { transform: translateX(230px); }
     }
-    @keyframes type2-anim {
-      0%, 20.83% { width: 0; }
-      29.17%, 100% { width: 105px; }
+    @keyframes mask2-anim {
+      0%, 20.83% { transform: translateX(0); }
+      29.17%, 100% { transform: translateX(105px); }
     }
-    @keyframes type3-anim {
-      0%, 37.5% { width: 0; }
-      54.17%, 100% { width: 335px; }
+    @keyframes mask3-anim {
+      0%, 37.5% { transform: translateX(0); }
+      54.17%, 100% { transform: translateX(335px); }
     }
-    @keyframes type4-anim {
-      0%, 60.83% { width: 0; }
-      69.17%, 100% { width: 105px; }
+    @keyframes mask4-anim {
+      0%, 60.83% { transform: translateX(0); }
+      69.17%, 100% { transform: translateX(105px); }
     }
     
     /* Unified Cursors Animations (Combines movement and visibility to prevent drift) */
@@ -219,7 +203,8 @@
   
   <!-- Line 1: greet command -->
   <text x="35" y="62" class="code-text prompt">euler~% </text>
-  <text x="105" y="62" class="code-text command" clip-path="url(#clip1)">greet <tspan class="flag">--role</tspan> <tspan class="string">"CS Freshman"</tspan></text>
+  <text x="105" y="62" class="code-text command">greet <tspan class="flag">--role</tspan> <tspan class="string">"CS Freshman"</tspan></text>
+  <rect x="105" y="48" width="230" height="20" fill="#1a1b26" class="mask-rect-1"/>
   <rect x="105" y="48" width="8" height="16" class="cursor cursor1"/>
   
   <!-- Line 2: greet output -->
@@ -227,7 +212,8 @@
   
   <!-- Line 3: show-profile command -->
   <text x="35" y="108" class="code-text prompt pr2">euler~% </text>
-  <text x="105" y="108" class="code-text command" clip-path="url(#clip2)">show-profile</text>
+  <text x="105" y="108" class="code-text command">show-profile</text>
+  <rect x="105" y="94" width="105" height="20" fill="#1a1b26" class="mask-rect-2"/>
   <rect x="105" y="94" width="8" height="16" class="cursor cursor2"/>
   
   <!-- Line 4 & 5: show-profile outputs -->
@@ -236,7 +222,8 @@
   
   <!-- Line 6: claude command -->
   <text x="35" y="177" class="code-text prompt pr3">euler~% </text>
-  <text x="105" y="177" class="code-text command" clip-path="url(#clip3)">claude <tspan class="flag">--dangerously-skip-permissions</tspan></text>
+  <text x="105" y="177" class="code-text command">claude <tspan class="flag">--dangerously-skip-permissions</tspan></text>
+  <rect x="105" y="163" width="335" height="20" fill="#1a1b26" class="mask-rect-3"/>
   <rect x="105" y="163" width="8" height="16" class="cursor cursor3"/>
   
   <!-- Line 7: claude output -->
@@ -244,7 +231,8 @@
   
   <!-- Line 8: codex command -->
   <text x="35" y="223" class="code-text prompt pr4">euler~% </text>
-  <text x="105" y="223" class="code-text command" clip-path="url(#clip4)">codex <tspan class="flag">--yolo</tspan></text>
+  <text x="105" y="223" class="code-text command">codex <tspan class="flag">--yolo</tspan></text>
+  <rect x="105" y="209" width="105" height="20" fill="#1a1b26" class="mask-rect-4"/>
   <rect x="105" y="209" width="8" height="16" class="cursor cursor4"/>
   
   <!-- Line 9: codex output -->
