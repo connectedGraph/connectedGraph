@@ -12,8 +12,20 @@ def clear_collected_defs():
 def get_collected_defs():
     return "\n".join(collected_defs)
 
-def load_icon_svg(name, default_svg, subfolder="", target_size=16, color=None):
+def load_icon_svg(name, default_svg, subfolder="", target_size=16, color=None, theme="dark"):
     global collected_defs
+    
+    # Selective color mapping for light theme
+    if theme == "light":
+        if name in ["nextjs", "express"]:
+            default_svg = default_svg.replace('stroke="#ffffff"', 'stroke="#1a1b26"')\
+                                     .replace('stroke="#FFFFFF"', 'stroke="#1a1b26"')\
+                                     .replace('fill="#ffffff"', 'fill="#1a1b26"')\
+                                     .replace('fill="#FFFFFF"', 'fill="#1a1b26"')\
+                                     .replace('fill="#a9b1d6"', 'fill="#1a1b26"')
+        elif name == "codex":
+            default_svg = default_svg.replace('#9ece6a', '#22863a')
+            
     filepath = os.path.join("icon svg", subfolder, f"{name}.svg")
     if not os.path.exists(filepath):
         return default_svg
@@ -21,6 +33,15 @@ def load_icon_svg(name, default_svg, subfolder="", target_size=16, color=None):
     try:
         with open(filepath, "r", encoding="utf-8") as f:
             content = f.read().strip()
+            
+        if theme == "light":
+            if name in ["nextjs", "express"]:
+                content = content.replace('fill="#FFFFFF"', 'fill="#1a1b26"')\
+                                 .replace('fill="#ffffff"', 'fill="#1a1b26"')\
+                                 .replace('stroke="#ffffff"', 'stroke="#1a1b26"')\
+                                 .replace('stroke="#FFFFFF"', 'stroke="#1a1b26"')
+            elif name == "codex":
+                content = content.replace('#9ece6a', '#22863a')
         
         # Extract viewBox
         viewbox_match = re.search(r'viewBox="([^"]+)"', content)

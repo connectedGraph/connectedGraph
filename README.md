@@ -1,26 +1,35 @@
 <div align="center">
 
 <!-- Avatar -->
-<img src="./avatar_animated.svg" width="160" height="160" alt="Euler Rap Animated Avatar" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark/avatar_animated.svg">
+  <img alt="Euler Rap Animated Avatar" src="./light/avatar_animated.svg" width="160" height="160">
+</picture>
 
 ### Hi there, I'm **Euler Rap** (connectedGraph) 👋
 
 > INTP &bull; Project-Driven Learner &bull; Full-Stack AI Application Developer &bull; AI in Education (AIED)
 
-<img src="./thinking_header.svg" width="300" height="35" alt="Thinking status" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark/thinking_header.svg">
+  <img alt="Thinking status" src="./light/thinking_header.svg" width="300" height="35">
+</picture>
 
 <!-- Social Badges -->
-<a href="https://6767.chat"><img src="./badge_website.svg" alt="Website" /></a>
-<a href="https://blog.6767.chat"><img src="./badge_blog.svg" alt="Blog" /></a>
-<a href="https://github.com/connectedGraph"><img src="./badge_github.svg" alt="GitHub" /></a>
-<a href="https://qm.qq.com/q/ULGA0Myeo8"><img src="./badge_qq.svg" alt="QQ" /></a>
-<a href="https://www.zhihu.com/people/bmmdkp"><img src="./badge_zhihu.svg" alt="Zhihu" /></a>
+<a href="https://6767.chat"><picture><source media="(prefers-color-scheme: dark)" srcset="./dark/badge_website.svg"><img alt="Website" src="./light/badge_website.svg"></picture></a>
+<a href="https://blog.6767.chat"><picture><source media="(prefers-color-scheme: dark)" srcset="./dark/badge_blog.svg"><img alt="Blog" src="./light/badge_blog.svg"></picture></a>
+<a href="https://github.com/connectedGraph"><picture><source media="(prefers-color-scheme: dark)" srcset="./dark/badge_github.svg"><img alt="GitHub" src="./light/badge_github.svg"></picture></a>
+<a href="https://qm.qq.com/q/ULGA0Myeo8"><picture><source media="(prefers-color-scheme: dark)" srcset="./dark/badge_qq.svg"><img alt="QQ" src="./light/badge_qq.svg"></picture></a>
+<a href="https://www.zhihu.com/people/bmmdkp"><picture><source media="(prefers-color-scheme: dark)" srcset="./dark/badge_zhihu.svg"><img alt="Zhihu" src="./light/badge_zhihu.svg"></picture></a>
 
 <br/>
 <br/>
 
 <!-- Hero Terminal Card -->
-<img src="./typewriter.svg" width="100%" style="max-width: 750px;" alt="Euler Rap Terminal" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark/typewriter.svg">
+  <img alt="Euler Rap Terminal" src="./light/typewriter.svg" width="100%" style="max-width: 750px;">
+</picture>
 
 </div>
 
@@ -28,29 +37,44 @@
 
 <!-- Tech Stack Section -->
 <br/>
-<img src="./header_tech_stack.svg" alt="Tech Stack" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark/header_tech_stack.svg">
+  <img alt="Tech Stack" src="./light/header_tech_stack.svg">
+</picture>
 <br/>
 
 <div align="center">
-  <img src="./tech_stack.svg" width="100%" style="max-width: 750px;" alt="Tech Stack" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./dark/tech_stack.svg">
+    <img alt="Tech Stack" src="./light/tech_stack.svg" width="100%" style="max-width: 750px;">
+  </picture>
 </div>
 
 ---
 
 <!-- Projects Section -->
 <br/>
-<img src="./header_projects.svg" alt="Projects" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark/header_projects.svg">
+  <img alt="Projects" src="./light/header_projects.svg">
+</picture>
 <br/>
 
 <div align="center">
-  <img src="./projects.svg" width="100%" style="max-width: 750px;" alt="Projects" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./dark/projects.svg">
+    <img alt="Projects" src="./light/projects.svg" width="100%" style="max-width: 750px;">
+  </picture>
 </div>
 
 ---
 
 <!-- Public APIs Section -->
 <br/>
-<img src="./header_public_apis.svg" alt="Public APIs" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark/header_public_apis.svg">
+  <img alt="Public APIs" src="./light/header_public_apis.svg">
+</picture>
 <br/>
 
 > Open endpoints available for public use ✨
@@ -68,11 +92,17 @@ Explore the interactive API documentation at:
 
 <!-- GitHub Stats Section -->
 <br/>
-<img src="./header_stats.svg" alt="GitHub Stats" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark/header_stats.svg">
+  <img alt="GitHub Stats" src="./light/header_stats.svg">
+</picture>
 <br/>
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=connectedGraph&theme=tokyo-night&hide_border=true&area=true" width="100%" style="max-width: 800px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.25);" alt="Activity Graph" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=connectedGraph&theme=tokyo-night&hide_border=true&area=true">
+    <img alt="Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph?username=connectedGraph&theme=github-light-default&hide_border=true&area=true" width="100%" style="max-width: 800px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
+  </picture>
 </div>
 
 <br/>
@@ -81,10 +111,16 @@ Explore the interactive API documentation at:
   <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 800px;">
     <tr>
       <td valign="top" width="50%" style="padding-right: 10px;">
-        <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=connectedGraph&theme=tokyonight" width="100%" style="border-radius: 10px;" alt="Profile Details" />
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=connectedGraph&theme=tokyonight">
+          <img alt="Profile Details" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=connectedGraph&theme=default" width="100%" style="border-radius: 10px;">
+        </picture>
       </td>
       <td valign="top" width="50%" style="padding-left: 10px;">
-        <img src="https://streak-stats.demolab.com?user=connectedGraph&theme=tokyonight&hide_border=true&background=1a1b26&ring=7aa2f7&fire=f7768e&currStreakLabel=a9b1d6" width="100%" style="border-radius: 10px;" alt="Streak Stats" />
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=connectedGraph&theme=tokyonight&hide_border=true&background=1a1b26&ring=7aa2f7&fire=f7768e&currStreakLabel=a9b1d6">
+          <img alt="Streak Stats" src="https://streak-stats.demolab.com?user=connectedGraph&theme=default&hide_border=true" width="100%" style="border-radius: 10px;">
+        </picture>
       </td>
     </tr>
   </table>
@@ -94,7 +130,10 @@ Explore the interactive API documentation at:
 
 <!-- Roadmap Section -->
 <br/>
-<img src="./header_roadmap.svg" alt="Roadmap" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark/header_roadmap.svg">
+  <img alt="Roadmap" src="./light/header_roadmap.svg">
+</picture>
 <br/>
 
 ```text
@@ -107,7 +146,10 @@ Later→ Documentation & Portals: Launching public guides for SGS, Shizuku, and 
 
 <!-- Ask Me Anything Section -->
 <br/>
-<img src="./header_ask_me.svg" alt="Ask Me Anything" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dark/header_ask_me.svg">
+  <img alt="Ask Me Anything" src="./light/header_ask_me.svg">
+</picture>
 <br/>
 
 > My homepage integrates personal notes, blogs, and custom knowledge bases. Feel free to ask Claude about me directly!

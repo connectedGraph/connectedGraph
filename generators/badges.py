@@ -1,6 +1,6 @@
 from generators import load_icon_svg, clear_collected_defs, get_collected_defs
 
-def generate_social_badges():
+def generate_social_badges(output_dir=".", theme="dark"):
     # Globe icon (stroke-based)
     globe_path = '<circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c1.5 2 1.5 11 0 13M8 1.5c-1.5 2-1.5 11 0 13"/>'
     # Pen/Edit icon (stroke-based)
@@ -32,26 +32,45 @@ def generate_social_badges():
         "Codex": 35
     }
 
+    if theme == "light":
+        pill_fill = "#ffffff"
+        pill_stroke = "#d1d5db"
+        text_color = "#24292e"
+        color_map = {
+            "#7dcfff": "#005cc5",
+            "#bb9af3": "#6f42c1",
+            "#a9b1d6": "#444d56",
+            "#7aa2f7": "#0366d6",
+            "#9ece6a": "#22863a"
+        }
+    else:
+        pill_fill = "#16161e"
+        pill_stroke = "#24283b"
+        text_color = "#c0caf5"
+        color_map = {}
+
     for filename, width, icon_svg, color, label, is_fill in badges:
         clear_collected_defs()
         local_name = label.lower()
         if local_name == "6767.chat":
             local_name = "website"
             
+        badge_color = color_map.get(color, color) if theme == "light" else color
+            
         import os
         has_local = os.path.exists(os.path.join("icon svg", f"{local_name}.svg"))
         
         if has_local:
-            loaded_svg = load_icon_svg(local_name, icon_svg, color=color)
+            loaded_svg = load_icon_svg(local_name, icon_svg, color=badge_color, theme=theme)
             if is_fill:
-                icon_content = f'<g fill="{color}">{loaded_svg}</g>'
+                icon_content = f'<g fill="{badge_color}">{loaded_svg}</g>'
             else:
-                icon_content = f'<g stroke="{color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">{loaded_svg}</g>'
+                icon_content = f'<g stroke="{badge_color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">{loaded_svg}</g>'
         else:
             if is_fill:
-                icon_content = icon_svg.replace("{color}", color)
+                icon_content = icon_svg.replace("{color}", badge_color)
             else:
-                icon_content = f'<g stroke="{color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">{icon_svg}</g>'
+                icon_content = f'<g stroke="{badge_color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">{icon_svg}</g>'
         
         # Calculate horizontal centering for icon + text group
         text_w = label_widths.get(label, len(label) * 7)
@@ -63,12 +82,13 @@ def generate_social_badges():
         defs_block = f"\n  <defs>\n{badge_defs}\n  </defs>" if badge_defs else ""
         
         svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="28" fill="none">{defs_block}
-  <rect x="0.5" y="0.5" width="{width - 1}" height="27" rx="14" fill="#16161e" stroke="#24283b" stroke-width="1"/>
+  <rect x="0.5" y="0.5" width="{width - 1}" height="27" rx="14" fill="{pill_fill}" stroke="{pill_stroke}" stroke-width="1"/>
   <g transform="translate({start_x:.1f}, 6)">
     {icon_content}
   </g>
-  <text x="{text_x:.1f}" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#c0caf5">{label}</text>
+  <text x="{text_x:.1f}" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="{text_color}">{label}</text>
 </svg>"""
-        with open(filename, "w", encoding="utf-8") as f:
+        filepath = os.path.join(output_dir, filename)
+        with open(filepath, "w", encoding="utf-8") as f:
             f.write(svg)
-        print(f"Generated {filename}")
+        print(f"Generated {filepath} ({theme})")

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="65" height="28" fill="none">
+  <rect x="0.5" y="0.5" width="64" height="27" rx="14" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <g transform="translate(12.5, 6)">
+    <g stroke="#005cc5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><g transform="scale(0.08333)"><path  stroke-linejoin="round" stroke-width="12" d="M153.933 114.718c-2.953-9.509-6.349-17.5-11.573-30.58C143.172 49.786 128.922 22 96.101 22c-33.189 0-47.125 28.34-46.24 62.139-5.241 13.097-8.62 21.033-11.573 30.579-6.276 20.256-4.246 28.636-2.695 28.821 3.323.407 12.94-15.243 12.94-15.243 0 9.064 4.651 20.886 14.73 29.413-4.873 1.499-15.82 5.532-13.217 9.953 2.105 3.57 36.217 2.275 46.056 1.165 9.838 1.11 43.95 2.405 46.055-1.165 2.602-4.403-8.362-8.454-13.217-9.953 10.078-8.546 14.73-20.367 14.73-29.413 0 0 9.617 15.65 12.94 15.243 1.569-.203 3.6-8.583-2.677-28.821Z"/></g></g>
+  </g>
+  <text x="34.5" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#24292e">QQ</text>
+</svg>

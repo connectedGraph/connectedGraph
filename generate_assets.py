@@ -14,21 +14,25 @@ def main():
     apis_path = '<path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" fill="none"/>'
     stats_path = '<path d="M18 20V10M12 20V4M6 20v-6" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" fill="none"/>'
     roadmap_path = '<path d="M9 6h11M9 12h11M9 18h11M5 6v.01M5 12v.01M5 18v.01" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" fill="none"/>'
-    ask_path = '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="url(#header-grad)" stroke-width="2" stroke-linecap="round" fill="none"/>'
+    ask_path = '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" fill="none"/>'
 
-    # Run each SVG asset generator
-    generate_typewriter()
-    generate_header("Tech Stack", "header_tech_stack.svg", tech_path)
-    generate_header("Projects", "header_projects.svg", projects_path)
-    generate_header("Public APIs", "header_public_apis.svg", apis_path)
-    generate_header("GitHub Stats", "header_stats.svg", stats_path)
-    generate_header("Roadmap", "header_roadmap.svg", roadmap_path)
-    generate_header("Ask Me", "header_ask_me.svg", ask_path)
-    generate_social_badges()
-    generate_tech_stack()
-    generate_projects()
-    generate_thinking_header()
-    generate_avatar()
+    for theme in ["dark", "light"]:
+        print(f"\n--- Generating assets for {theme.upper()} theme ---")
+        os.makedirs(theme, exist_ok=True)
+        
+        # Run each SVG asset generator
+        generate_typewriter(output_dir=theme, theme=theme)
+        generate_header("Tech Stack", "header_tech_stack.svg", tech_path, output_dir=theme, theme=theme)
+        generate_header("Projects", "header_projects.svg", projects_path, output_dir=theme, theme=theme)
+        generate_header("Public APIs", "header_public_apis.svg", apis_path, output_dir=theme, theme=theme)
+        generate_header("GitHub Stats", "header_stats.svg", stats_path, output_dir=theme, theme=theme)
+        generate_header("Roadmap", "header_roadmap.svg", roadmap_path, output_dir=theme, theme=theme)
+        generate_header("Ask Me", "header_ask_me.svg", ask_path, output_dir=theme, theme=theme)
+        generate_social_badges(output_dir=theme, theme=theme)
+        generate_tech_stack(output_dir=theme, theme=theme)
+        generate_projects(output_dir=theme, theme=theme)
+        generate_thinking_header(output_dir=theme, theme=theme)
+        generate_avatar(output_dir=theme, theme=theme)
 
 if __name__ == "__main__":
     main()

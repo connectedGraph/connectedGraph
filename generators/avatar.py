@@ -1,4 +1,6 @@
-def generate_avatar():
+import os
+
+def generate_avatar(output_dir=".", theme="dark"):
     import base64
     try:
         with open("avatar.jpg", "rb") as image_file:
@@ -7,6 +9,19 @@ def generate_avatar():
     except Exception as e:
         print(f"Warning: Could not read avatar.jpg: {e}")
         image_href = "./avatar.jpg" # fallback
+
+    if theme == "light":
+        ring1 = "#0366d6"
+        ring2 = "#6f42c1"
+        ring3 = "#005cc5"
+        border = "#0366d6"
+        border_hover = "#6f42c1"
+    else:
+        ring1 = "#7aa2f7"
+        ring2 = "#bb9af3"
+        ring3 = "#7dcfff"
+        border = "#7aa2f7"
+        border_hover = "#bb9af3"
 
     # We will embed the local avatar.jpg by wrapping it inside an SVG pattern mask
     content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none">
@@ -21,11 +36,11 @@ def generate_avatar():
       <image href="{image_href}" x="0" y="0" width="120" height="120" preserveAspectRatio="xMidYMid slice"/>
     </pattern>
   </defs>
-
+ 
   <style>
     /* Pulsing Bubble/Ring animations */
     .bubble-ring-1 {{
-      stroke: #7aa2f7;
+      stroke: {ring1};
       stroke-width: 1.5px;
       opacity: 0.85;
       transform-origin: 80px 80px;
@@ -33,7 +48,7 @@ def generate_avatar():
     }}
     
     .bubble-ring-2 {{
-      stroke: #bb9af3;
+      stroke: {ring2};
       stroke-width: 1.2px;
       opacity: 0.6;
       transform-origin: 80px 80px;
@@ -42,7 +57,7 @@ def generate_avatar():
     }}
     
     .bubble-ring-3 {{
-      stroke: #7dcfff;
+      stroke: {ring3};
       stroke-width: 1px;
       opacity: 0.35;
       transform-origin: 80px 80px;
@@ -51,13 +66,13 @@ def generate_avatar():
     }}
     
     .avatar-border {{
-      stroke: #7aa2f7;
+      stroke: {border};
       stroke-width: 3.5px;
       transition: stroke 0.3s ease;
     }}
     
     .avatar-container:hover .avatar-border {{
-      stroke: #bb9af3;
+      stroke: {border_hover};
     }}
 
     @keyframes pulse-ring {{
@@ -86,6 +101,7 @@ def generate_avatar():
   </g>
 </svg>
 """
-    with open("avatar_animated.svg", "w", encoding="utf-8") as f:
+    filepath = os.path.join(output_dir, "avatar_animated.svg")
+    with open(filepath, "w", encoding="utf-8") as f:
         f.write(content)
-    print("Generated avatar_animated.svg")
+    print(f"Generated {filepath} ({theme})")

@@ -1,0 +1,451 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="35" viewBox="0 0 300 35" fill="none">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .cc-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 100%;
+        }
+        .cc {
+          font-family: "Cascadia Code", "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+          color: #24292e;
+          font-size: 14px;
+          line-height: 1.55;
+          user-select: none;
+        }
+        .cc-row-container {
+          display: grid;
+          grid-template-columns: 1fr;
+          width: 100%;
+          justify-items: center;
+          align-items: center;
+        }
+        .cc-row {
+          grid-area: 1 / 1;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          opacity: 0;
+          visibility: hidden;
+          animation: word-step 36s infinite linear;
+        }
+        .cc-spin-container {
+          display: inline-grid;
+          grid-template-columns: 1fr;
+          align-items: center;
+          justify-items: center;
+          width: 1.3em;
+          height: 1.55em;
+          position: relative;
+          flex: 0 0 auto;
+        }
+        .cc-spin {
+          grid-area: 1 / 1;
+          color: #005cc5;
+          font-weight: 700;
+          line-height: 1;
+          opacity: 0;
+          visibility: hidden;
+          animation: spin-step 2.4s infinite linear;
+        }
+        .cc-label {
+          white-space: nowrap;
+          display: inline-flex;
+          align-items: center;
+        }
+        .cc-verb {
+          background: linear-gradient(90deg, #005cc5 0%, #005cc5 38%, #c8e1ff 50%, #005cc5 62%, #005cc5 100%);
+          background-size: 220% 100%;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: #005cc5;
+          animation: cc-sweep 2.4s linear infinite;
+        }
+        .cc-dots {
+          color: #24292e;
+          margin-left: 2px;
+        }
+        @keyframes cc-sweep {
+          0% { background-position: 130% 0; }
+          100% { background-position: -30% 0; }
+        }
+        @keyframes spin-step {
+          0%, 8.333% { opacity: 1; visibility: visible; }
+          8.334%, 100% { opacity: 0; visibility: hidden; }
+        }
+        @keyframes word-step {
+          0%, 5.555% { opacity: 1; visibility: visible; }
+          5.556%, 100% { opacity: 0; visibility: hidden; }
+        }
+      </style>
+      <div class="cc cc-container">
+        <div class="cc-row-container">
+          <div class="cc-row" style="animation-delay: -36s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Cogitating</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -34s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Pondering</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -32s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Contemplating</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -30s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Deliberating</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -28s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Architecting</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -26s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Synthesizing</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -24s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Orchestrating</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -22s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Composing</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -20s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Brewing</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -18s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Whisking</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -16s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Caramelizing</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -14s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Marinating</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -12s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Seasoning</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -10s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Crystallizing</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -8s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Transmuting</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -6s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Conjuring</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -4s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Finagling</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+          <div class="cc-row" style="animation-delay: -2s;">
+            <span class="cc-spin-container">
+            <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+            <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+            <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+            <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+            <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+            <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+            <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+            </span>
+            <span class="cc-label">
+              <span class="cc-verb">Vibing</span>
+              <span class="cc-dots">…</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
