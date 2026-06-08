@@ -26,7 +26,7 @@
       <text x="305" y="51" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" fill="#a9b1d6">Immersive reading script for Zhihu, featuring ad-blocking, AI summaries, and Markdown exports.</text>
     </g>
     <line x1="35" y1="71" x2="715" y2="71" stroke="#24283b" stroke-width="1"/>
-    <!-- Row 1: Sanguosha Voice & Lines -->
+    <!-- Row 1: Sanguosha Voice &amp; Lines -->
     <g transform="translate(0, 0)">
       <!-- Folder Icon -->
       <g transform="translate(35, 80)" stroke="#7aa2f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
@@ -34,7 +34,7 @@
       </g>
       
       <!-- Project Name -->
-      <text x="62" y="93" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="13.5" font-weight="bold" fill="#7dcfff">Sanguosha Voice & Lines</text>
+      <text x="62" y="93" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="13.5" font-weight="bold" fill="#7dcfff">Sanguosha Voice &amp; Lines</text>
       
       <!-- Status Badge -->
       <rect x="245" y="81" width="48" height="17" rx="8.5" fill="#132f22"/>

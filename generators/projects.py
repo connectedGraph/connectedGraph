@@ -46,13 +46,17 @@ def generate_projects():
     for idx, p in enumerate(projects):
         row_y = 50 + idx * 42
         
+        # XML escape special characters for safety
+        name_escaped = p['name'].replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        desc_escaped = p['desc'].replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+        
         # Draw separator line between rows (except after the last one)
         sep_line = ""
         if idx < len(projects) - 1:
             sep_y = row_y + 21
             sep_line = f'<line x1="35" y1="{sep_y}" x2="715" y2="{sep_y}" stroke="#24283b" stroke-width="1"/>'
             
-        rows_html += f"""    <!-- Row {idx}: {p['name']} -->
+        rows_html += f"""    <!-- Row {idx}: {name_escaped} -->
     <g transform="translate(0, 0)">
       <!-- Folder Icon -->
       <g transform="translate(35, {row_y - 12})" stroke="#7aa2f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
@@ -60,14 +64,14 @@ def generate_projects():
       </g>
       
       <!-- Project Name -->
-      <text x="62" y="{row_y + 1}" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="13.5" font-weight="bold" fill="#7dcfff">{p['name']}</text>
+      <text x="62" y="{row_y + 1}" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="13.5" font-weight="bold" fill="#7dcfff">{name_escaped}</text>
       
       <!-- Status Badge -->
       <rect x="245" y="{row_y - 11}" width="48" height="17" rx="8.5" fill="{p['status_bg']}"/>
       <text x="269" y="{row_y + 1}" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="9.5" font-weight="800" fill="{p['status_fg']}" text-anchor="middle">{p['status']}</text>
       
       <!-- Description -->
-      <text x="305" y="{row_y + 1}" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" fill="#a9b1d6">{p['desc']}</text>
+      <text x="305" y="{row_y + 1}" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" fill="#a9b1d6">{desc_escaped}</text>
     </g>
     {sep_line}
 """
