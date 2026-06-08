@@ -8,11 +8,11 @@
 > INTP &bull; Project-Driven Learner &bull; Full-Stack AI Application Developer &bull; AI in Education (AIED)
 
 <!-- Social Badges -->
-<a href="https://6767.chat"><img src="https://img.shields.io/badge/🌐_6767.chat-7aa2f7?style=flat-square&logoColor=white" alt="Website" /></a>
-<a href="https://blog.6767.chat"><img src="https://img.shields.io/badge/✎_Blog-bb9af3?style=flat-square" alt="Blog" /></a>
-<a href="https://github.com/connectedGraph"><img src="https://img.shields.io/badge/GitHub-connectedGraph-1f2335?style=flat-square&logo=github&logoColor=white" alt="GitHub" /></a>
-<a href="https://x.com/EulerRap"><img src="https://img.shields.io/badge/X-EulerRap-1f2335?style=flat-square&logo=x&logoColor=white" alt="X" /></a>
-<a href="https://www.zhihu.com/people/bmmdkp"><img src="https://img.shields.io/badge/Zhihu-Euler_Rap-0084ff?style=flat-square&logo=zhihu&logoColor=white" alt="Zhihu" /></a>
+<a href="https://6767.chat"><img src="./badge_website.svg" alt="Website" /></a>
+<a href="https://blog.6767.chat"><img src="./badge_blog.svg" alt="Blog" /></a>
+<a href="https://github.com/connectedGraph"><img src="./badge_github.svg" alt="GitHub" /></a>
+<a href="https://x.com/EulerRap"><img src="./badge_x.svg" alt="X" /></a>
+<a href="https://www.zhihu.com/people/bmmdkp"><img src="./badge_zhihu.svg" alt="Zhihu" /></a>
 
 <br/>
 <br/>

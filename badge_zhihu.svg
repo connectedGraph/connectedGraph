@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="28" fill="none">
+  <rect x="0.5" y="0.5" width="79" height="27" rx="14" fill="#16161e" stroke="#24283b" stroke-width="1"/>
+  <g transform="translate(8, 6)">
+    <g stroke="#7aa2f7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M2.5 1.5h11c.6 0 1 .4 1 1v8c0 .6-.4 1-1 1H7l-4 3v-3c-.6 0-1.1-.4-1.1-1v-8c0-.6.5-1 1.1-1z" stroke-width="1.5"/><path d="M5 4h6M5 7h4" stroke-width="1.5"/></g>
+  </g>
+  <text x="30" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#c0caf5">Zhihu</text>
+</svg>

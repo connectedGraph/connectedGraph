@@ -283,14 +283,51 @@ def generate_header(name, filename, svg_path):
         f.write(content)
     print(f"Generated {filename}")
 
+def generate_social_badges():
+    # Globe icon (stroke-based)
+    globe_path = '<circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c1.5 2 1.5 11 0 13M8 1.5c-1.5 2-1.5 11 0 13"/>'
+    # Pen/Edit icon (stroke-based)
+    pen_path = '<path d="M11.5 1.5a1.5 1.5 0 1 1 2 2L4.5 12.5 1.5 13.5l1-3zM10 3l3 3"/>'
+    # GitHub icon (fill-based)
+    github_path = '<path d="M8 .2C3.6.2 0 3.8 0 8.2c0 3.5 2.3 6.5 5.5 7.6.4.1.5-.2.5-.4v-1.4c-2.2.5-2.7-1.1-2.7-1.1-.4-.9-.9-1.2-.9-1.2-.7-.5.1-.5.1-.5.8.1 1.2.8 1.2.8.7 1.2 1.9.9 2.3.7.1-.5.3-.9.5-1.1-1.8-.2-3.6-.9-3.6-4 0-.9.3-1.6.8-2.2-.1-.2-.4-1 .1-2.1 0 0 .7-.2 2.2.8a7.8 7.8 0 0 1 4.1 0c1.5-1 2.2-.8 2.2-.8.5 1.1.2 1.9.1 2.1.5.6.8 1.3.8 2.2 0 3.1-1.9 3.8-3.7 4 .3.3.5.8.5 1.6V15c0 .2.1.5.6.4C13.7 14.7 16 11.7 16 8.2 16 3.8 12.4.2 8 .2z" fill="{color}" stroke="none"/>'
+    # X icon (fill-based)
+    x_path = '<path d="M1 1l5.5 7.3L1 15h2.5L9 9.5l3.5 4.5H15l-6-8L14 1h-2.5L7 6.5 3.5 1H1z" fill="{color}" stroke="none"/>'
+    # Chat bubble icon (stroke-based)
+    zhihu_path = '<path d="M2.5 1.5h11c.6 0 1 .4 1 1v8c0 .6-.4 1-1 1H7l-4 3v-3c-.6 0-1.1-.4-1.1-1v-8c0-.6.5-1 1.1-1z" stroke-width="1.5"/><path d="M5 4h6M5 7h4" stroke-width="1.5"/>'
+
+    badges = [
+        ("badge_website.svg", 108, globe_path, "#7dcfff", "6767.chat", False),
+        ("badge_blog.svg", 72, pen_path, "#bb9af3", "Blog", False),
+        ("badge_github.svg", 88, github_path, "#a9b1d6", "GitHub", True),
+        ("badge_x.svg", 55, x_path, "#ffffff", "X", True),
+        ("badge_zhihu.svg", 80, zhihu_path, "#7aa2f7", "Zhihu", False)
+    ]
+
+    for filename, width, icon_svg, color, label, is_fill in badges:
+        if is_fill:
+            icon_content = icon_svg.replace("{color}", color)
+        else:
+            icon_content = f'<g stroke="{color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">{icon_svg}</g>'
+        
+        svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{width}" height="28" fill="none">
+  <rect x="0.5" y="0.5" width="{width - 1}" height="27" rx="14" fill="#16161e" stroke="#24283b" stroke-width="1"/>
+  <g transform="translate(8, 6)">
+    {icon_content}
+  </g>
+  <text x="30" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#c0caf5">{label}</text>
+</svg>"""
+        with open(filename, "w", encoding="utf-8") as f:
+            f.write(svg)
+        print(f"Generated {filename}")
+
 def main():
     # Icons
     tech_path = '<path d="M16 18l6-6-6-6M8 6L2 12l6 6" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
     projects_path = '<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" stroke="url(#header-grad)" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M12 11l2 2-2 2" stroke="url(#header-grad)" stroke-width="2" stroke-linecap="round" fill="none"/>'
-    apis_path = '<path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="url(#header-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
+    apis_path = '<path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="url(#header-grad)" stroke-width="2" stroke-linecap="round" fill="none"/>'
     stats_path = '<path d="M18 20V10M12 20V4M6 20v-6" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
     roadmap_path = '<path d="M9 6h11M9 12h11M9 18h11M5 6v.01M5 12v.01M5 18v.01" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
-    ask_path = '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="url(#header-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
+    ask_path = '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="url(#header-grad)" stroke-width="2" stroke-linecap="round" fill="none"/>'
 
     generate_typewriter()
     generate_header("Tech Stack", "header_tech_stack.svg", tech_path)
@@ -299,6 +336,7 @@ def main():
     generate_header("GitHub Stats", "header_stats.svg", stats_path)
     generate_header("Roadmap", "header_roadmap.svg", roadmap_path)
     generate_header("Ask Me", "header_ask_me.svg", ask_path)
+    generate_social_badges()
 
 if __name__ == "__main__":
     main()
