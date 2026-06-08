@@ -85,8 +85,15 @@ POST https://6767.chat/api/tts-proxy/mimo     → MiMo TTS proxy
 POST https://6767.chat/api/speech-score       → Youdao speech assessment proxy
 ```
 
-Explore the interactive API documentation at:
-👉 **[6767.chat/api/docs](https://6767.chat/api/docs)**
+<br/>
+<div align="center">
+  <a href="https://6767.chat/api/docs">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./dark/api_docs.svg">
+      <img alt="Interactive API Documentation" src="./light/api_docs.svg" width="100%" style="max-width: 750px;">
+    </picture>
+  </a>
+</div>
 
 ---
 
