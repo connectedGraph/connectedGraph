@@ -64,24 +64,13 @@
 > Open endpoints available for public use ✨
 
 ```http
-GET  https://6767.chat/api/shizuku/image          → Shizuku image vocabulary list
-GET  https://6767.chat/source/shizuku/{name}       → Fetch corresponding image
-GET  https://6767.chat/api/tts-proxy/google        → Google TTS proxy
-POST https://6767.chat/api/tts-proxy/mimo          → MiMo TTS proxy
-POST https://6767.chat/api/speech-score            → Youdao speech assessment proxy
-GET  https://6767.chat/api/playground/lab-schedule → Laboratory schedule lookup
-POST https://6767.chat/api/ask                     → QA query over personal Claude knowledge base
+GET  https://6767.chat/api/tts-proxy/google   → Google TTS proxy
+POST https://6767.chat/api/tts-proxy/mimo     → MiMo TTS proxy
+POST https://6767.chat/api/speech-score       → Youdao speech assessment proxy
 ```
 
-### 🎨 Shizuku Random Image Demo
-
-```bash
-# Get the list of vocabulary items
-curl "https://6767.chat/api/shizuku/image"
-
-# Fetch a specific image using a keyword
-curl "https://6767.chat/source/shizuku/Angel" -o shizuku.jpg
-```
+Explore the interactive API documentation at:
+👉 **[6767.chat/api/docs](https://6767.chat/api/docs)**
 
 ---
 
