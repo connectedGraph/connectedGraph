@@ -1,60 +1,116 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="300" height="35" fill="none">
-  <style>
-    .container {
-      font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
-      font-size: 13px;
-      font-weight: bold;
-      fill: #bb9af3;
-    }
-    .dots {
-      fill: #7aa2f7;
-    }
-    .thinking-text::after {
-      content: 'Thinking';
-      animation: cycle-words 20s infinite steps(1);
-    }
-    .spinner::before {
-      content: '⠋';
-      animation: cycle-spinner 2s infinite steps(1);
-    }
-    
-    @keyframes cycle-words {
-      0.0%, 9.9% { content: 'Thinking'; }
-      10.0%, 19.9% { content: 'Loading components'; }
-      20.0%, 29.9% { content: 'Analyzing AIED DuoGrow'; }
-      30.0%, 39.9% { content: 'Configuring Claude Code'; }
-      40.0%, 49.9% { content: 'Parsing 6767.chat APIs'; }
-      50.0%, 59.9% { content: 'Skipping permissions'; }
-      60.0%, 69.9% { content: 'Accelerating YOLO mode'; }
-      70.0%, 79.9% { content: 'Syncing PostgreSQL DB'; }
-      80.0%, 89.9% { content: 'Compiling Next.js pages'; }
-      90.0%, 99.9% { content: 'Deploying SVG graphics'; }
-      100% { content: 'Thinking'; }
-    }
-    
-    @keyframes cycle-spinner {
-      0.0%, 9.9% { content: '⠋'; }
-      10.0%, 19.9% { content: '⠙'; }
-      20.0%, 29.9% { content: '⠹'; }
-      30.0%, 39.9% { content: '⠸'; }
-      40.0%, 49.9% { content: '⠼'; }
-      50.0%, 59.9% { content: '⠴'; }
-      60.0%, 69.9% { content: '⠦'; }
-      70.0%, 79.9% { content: '⠧'; }
-      80.0%, 89.9% { content: '⠇'; }
-      90.0%, 99.9% { content: '⠏'; }
-      100% { content: '⠋'; }
-    }
-  </style>
-
-  <g class="container">
-    <!-- Spinner -->
-    <text x="10" y="22" class="spinner" fill="#7dcfff"></text>
-    
-    <!-- Text and animated ellipses -->
-    <text x="32" y="22">
-      <tspan class="thinking-text" fill="#a9b1d6"></tspan>
-      <tspan class="dots">...</tspan>
-    </text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="35" viewBox="0 0 300 35" fill="none">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .cc {
+          font-family: "Cascadia Code", "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+          color: #c9d1d9;
+          font-size: 14px;
+          line-height: 1.55;
+          user-select: none;
+        }
+        .cc.cc-row {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .cc-spin-container {
+          display: inline-grid;
+          grid-template-columns: 1fr;
+          align-items: center;
+          justify-items: center;
+          width: 1.3em;
+          height: 1.55em;
+          position: relative;
+          flex: 0 0 auto;
+        }
+        .cc-spin {
+          grid-area: 1 / 1;
+          color: #22d3ee;
+          font-weight: 700;
+          line-height: 1;
+          opacity: 0;
+          visibility: hidden;
+          animation: spin-step 2.4s infinite linear;
+        }
+        .cc-label {
+          white-space: nowrap;
+          display: inline-flex;
+          align-items: center;
+        }
+        .cc-verb-container {
+          display: inline-grid;
+          grid-template-columns: 1fr;
+          align-items: center;
+        }
+        .cc-verb {
+          grid-area: 1 / 1;
+          background: linear-gradient(90deg, #22d3ee 0%, #22d3ee 38%, #e3fbff 50%, #22d3ee 62%, #22d3ee 100%);
+          background-size: 220% 100%;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: #22d3ee;
+          animation: cc-sweep 2.4s linear infinite, word-step 36s infinite linear;
+          opacity: 0;
+          visibility: hidden;
+        }
+        .cc-dots {
+          color: #c9d1d9;
+          margin-left: 2px;
+        }
+        @keyframes cc-sweep {
+          0% { background-position: 130% 0; }
+          100% { background-position: -30% 0; }
+        }
+        @keyframes spin-step {
+          0%, 8.333% { opacity: 1; visibility: visible; }
+          8.334%, 100% { opacity: 0; visibility: hidden; }
+        }
+        @keyframes word-step {
+          0%, 5.555% { opacity: 1; visibility: visible; }
+          5.556%, 100% { opacity: 0; visibility: hidden; }
+        }
+      </style>
+      <div class="cc cc-inline cc-row">
+        <span class="cc-spin-container">
+          <span class="cc-spin" style="animation-delay: -2.4s;">✻</span>
+          <span class="cc-spin" style="animation-delay: -2.2s;">✺</span>
+          <span class="cc-spin" style="animation-delay: -2.0s;">✹</span>
+          <span class="cc-spin" style="animation-delay: -1.8s;">✸</span>
+          <span class="cc-spin" style="animation-delay: -1.6s;">✶</span>
+          <span class="cc-spin" style="animation-delay: -1.4s;">✶</span>
+          <span class="cc-spin" style="animation-delay: -1.2s;">✦</span>
+          <span class="cc-spin" style="animation-delay: -1.0s;">✶</span>
+          <span class="cc-spin" style="animation-delay: -0.8s;">✶</span>
+          <span class="cc-spin" style="animation-delay: -0.6s;">✸</span>
+          <span class="cc-spin" style="animation-delay: -0.4s;">✹</span>
+          <span class="cc-spin" style="animation-delay: -0.2s;">✺</span>
+        </span>
+        <span class="cc-label">
+          <span class="cc-verb-container">
+            <span class="cc-verb" style="animation-delay: -36s;">Cogitating</span>
+            <span class="cc-verb" style="animation-delay: -34s;">Pondering</span>
+            <span class="cc-verb" style="animation-delay: -32s;">Contemplating</span>
+            <span class="cc-verb" style="animation-delay: -30s;">Deliberating</span>
+            <span class="cc-verb" style="animation-delay: -28s;">Architecting</span>
+            <span class="cc-verb" style="animation-delay: -26s;">Synthesizing</span>
+            <span class="cc-verb" style="animation-delay: -24s;">Orchestrating</span>
+            <span class="cc-verb" style="animation-delay: -22s;">Composing</span>
+            <span class="cc-verb" style="animation-delay: -20s;">Brewing</span>
+            <span class="cc-verb" style="animation-delay: -18s;">Whisking</span>
+            <span class="cc-verb" style="animation-delay: -16s;">Caramelizing</span>
+            <span class="cc-verb" style="animation-delay: -14s;">Marinating</span>
+            <span class="cc-verb" style="animation-delay: -12s;">Seasoning</span>
+            <span class="cc-verb" style="animation-delay: -10s;">Crystallizing</span>
+            <span class="cc-verb" style="animation-delay: -8s;">Transmuting</span>
+            <span class="cc-verb" style="animation-delay: -6s;">Conjuring</span>
+            <span class="cc-verb" style="animation-delay: -4s;">Finagling</span>
+            <span class="cc-verb" style="animation-delay: -2s;">Vibing</span>
+          </span>
+          <span class="cc-dots">…</span>
+        </span>
+      </div>
+    </div>
+  </foreignObject>
 </svg>

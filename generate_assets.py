@@ -417,79 +417,123 @@ def main():
     generate_avatar()
 
 def generate_thinking_header():
-    # Complete list of vocabulary/roadmap elements from readme
+    spinner_symbols = ['✻', '✺', '✹', '✸', '✶', '✶', '✦', '✶', '✶', '✸', '✹', '✺']
     words = [
-        "Thinking",
-        "Loading components",
-        "Analyzing AIED DuoGrow",
-        "Configuring Claude Code",
-        "Parsing 6767.chat APIs",
-        "Skipping permissions",
-        "Accelerating YOLO mode",
-        "Syncing PostgreSQL DB",
-        "Compiling Next.js pages",
-        "Deploying SVG graphics"
+        'Cogitating',
+        'Pondering',
+        'Contemplating',
+        'Deliberating',
+        'Architecting',
+        'Synthesizing',
+        'Orchestrating',
+        'Composing',
+        'Brewing',
+        'Whisking',
+        'Caramelizing',
+        'Marinating',
+        'Seasoning',
+        'Crystallizing',
+        'Transmuting',
+        'Conjuring',
+        'Finagling',
+        'Vibing'
     ]
-    
-    # 10 words, 2s each = 20s total loop duration
-    word_keyframes = ""
-    for idx, word in enumerate(words):
-        p_start = idx * 10.0
-        p_end = (idx + 1) * 10.0
-        # Instant state transitions to avoid cross-fade overlap
-        word_keyframes += f"      {p_start}%, {p_end - 0.1}% {{ content: '{word}'; }}\n"
-    # Ensure final frame matches start to loop smoothly
-    word_keyframes += "      100% { content: '" + words[0] + "'; }"
 
-    # Spinner symbols: 0.2s per step. A 20-step loop fits exactly into 4s total. We repeat the 4s spinner loop across the 20s cycle.
-    spinner_symbols = ["⠋", "⠙", "⠹", "⠸", "⠼", "⠴", "⠦", "⠧", "⠇", "⠏"]
-    spinner_keyframes = ""
-    steps_count = len(spinner_symbols)
+    spinner_items_html = ""
     for idx, char in enumerate(spinner_symbols):
-        p_start = (idx / steps_count) * 100.0
-        p_next = ((idx + 1) / steps_count) * 100.0
-        spinner_keyframes += f"      {p_start}%, {p_next - 0.1}% {{ content: '{char}'; }}\n"
-    spinner_keyframes += "      100% { content: '" + spinner_symbols[0] + "'; }"
+        delay = (idx - len(spinner_symbols)) * 0.2
+        spinner_items_html += f'          <span class="cc-spin" style="animation-delay: {delay:.1f}s;">{char}</span>\n'
 
-    content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="300" height="35" fill="none">
-  <style>
-    .container {{
-      font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
-      font-size: 13px;
-      font-weight: bold;
-      fill: #bb9af3;
-    }}
-    .dots {{
-      fill: #7aa2f7;
-    }}
-    .thinking-text::after {{
-      content: '{words[0]}';
-      animation: cycle-words 20s infinite steps(1);
-    }}
-    .spinner::before {{
-      content: '{spinner_symbols[0]}';
-      animation: cycle-spinner 2s infinite steps(1);
-    }}
-    
-    @keyframes cycle-words {{
-{word_keyframes}
-    }}
-    
-    @keyframes cycle-spinner {{
-{spinner_keyframes}
-    }}
-  </style>
+    word_items_html = ""
+    for idx, word in enumerate(words):
+        delay = (idx - len(words)) * 2
+        word_items_html += f'            <span class="cc-verb" style="animation-delay: {delay}s;">{word}</span>\n'
 
-  <g class="container">
-    <!-- Spinner -->
-    <text x="10" y="22" class="spinner" fill="#7dcfff"></text>
-    
-    <!-- Text and animated ellipses -->
-    <text x="32" y="22">
-      <tspan class="thinking-text" fill="#a9b1d6"></tspan>
-      <tspan class="dots">...</tspan>
-    </text>
-  </g>
+    content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="300" height="35" viewBox="0 0 300 35" fill="none">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .cc {{
+          font-family: "Cascadia Code", "JetBrains Mono", "SF Mono", Menlo, Consolas, monospace;
+          color: #c9d1d9;
+          font-size: 14px;
+          line-height: 1.55;
+          user-select: none;
+        }}
+        .cc.cc-row {{
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+        }}
+        .cc-spin-container {{
+          display: inline-grid;
+          grid-template-columns: 1fr;
+          align-items: center;
+          justify-items: center;
+          width: 1.3em;
+          height: 1.55em;
+          position: relative;
+          flex: 0 0 auto;
+        }}
+        .cc-spin {{
+          grid-area: 1 / 1;
+          color: #22d3ee;
+          font-weight: 700;
+          line-height: 1;
+          opacity: 0;
+          visibility: hidden;
+          animation: spin-step 2.4s infinite linear;
+        }}
+        .cc-label {{
+          white-space: nowrap;
+          display: inline-flex;
+          align-items: center;
+        }}
+        .cc-verb-container {{
+          display: inline-grid;
+          grid-template-columns: 1fr;
+          align-items: center;
+        }}
+        .cc-verb {{
+          grid-area: 1 / 1;
+          background: linear-gradient(90deg, #22d3ee 0%, #22d3ee 38%, #e3fbff 50%, #22d3ee 62%, #22d3ee 100%);
+          background-size: 220% 100%;
+          -webkit-background-clip: text;
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          color: #22d3ee;
+          animation: cc-sweep 2.4s linear infinite, word-step 36s infinite linear;
+          opacity: 0;
+          visibility: hidden;
+        }}
+        .cc-dots {{
+          color: #c9d1d9;
+          margin-left: 2px;
+        }}
+        @keyframes cc-sweep {{
+          0% {{ background-position: 130% 0; }}
+          100% {{ background-position: -30% 0; }}
+        }}
+        @keyframes spin-step {{
+          0%, 8.333% {{ opacity: 1; visibility: visible; }}
+          8.334%, 100% {{ opacity: 0; visibility: hidden; }}
+        }}
+        @keyframes word-step {{
+          0%, 5.555% {{ opacity: 1; visibility: visible; }}
+          5.556%, 100% {{ opacity: 0; visibility: hidden; }}
+        }}
+      </style>
+      <div class="cc cc-inline cc-row">
+        <span class="cc-spin-container">
+{spinner_items_html}        </span>
+        <span class="cc-label">
+          <span class="cc-verb-container">
+{word_items_html}          </span>
+          <span class="cc-dots">…</span>
+        </span>
+      </div>
+    </div>
+  </foreignObject>
 </svg>
 """
     with open("thinking_header.svg", "w", encoding="utf-8") as f:
@@ -497,8 +541,17 @@ def generate_thinking_header():
     print("Generated thinking_header.svg")
 
 def generate_avatar():
+    import base64
+    try:
+        with open("avatar.jpg", "rb") as image_file:
+            encoded_string = base64.b64encode(image_file.read()).decode('utf-8')
+            image_href = f"data:image/jpeg;base64,{encoded_string}"
+    except Exception as e:
+        print(f"Warning: Could not read avatar.jpg: {e}")
+        image_href = "./avatar.jpg" # fallback
+
     # We will embed the local avatar.jpg by wrapping it inside an SVG pattern mask
-    content = """<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none">
+    content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none">
   <defs>
     <!-- Shadow filters for realistic glass depth -->
     <filter id="avatar-shadow" x="-10%" y="-10%" width="120%" height="120%">
@@ -507,58 +560,58 @@ def generate_avatar():
     
     <!-- Pattern to mask the local avatar.jpg image inside the circular path -->
     <pattern id="avatar-pattern" x="0" y="0" width="1" height="1" patternUnits="objectBoundingBox">
-      <image href="./avatar.jpg" x="0" y="0" width="120" height="120" preserveAspectRatio="xMidYMid slice"/>
+      <image href="{image_href}" x="0" y="0" width="120" height="120" preserveAspectRatio="xMidYMid slice"/>
     </pattern>
   </defs>
 
   <style>
     /* Pulsing Bubble/Ring animations */
-    .bubble-ring-1 {
+    .bubble-ring-1 {{
       stroke: #7aa2f7;
       stroke-width: 1.5px;
       opacity: 0.85;
       transform-origin: 80px 80px;
       animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
-    }
+    }}
     
-    .bubble-ring-2 {
+    .bubble-ring-2 {{
       stroke: #bb9af3;
       stroke-width: 1.2px;
       opacity: 0.6;
       transform-origin: 80px 80px;
       animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
       animation-delay: 1.3s;
-    }
+    }}
     
-    .bubble-ring-3 {
+    .bubble-ring-3 {{
       stroke: #7dcfff;
       stroke-width: 1px;
       opacity: 0.35;
       transform-origin: 80px 80px;
       animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
       animation-delay: 2.6s;
-    }
+    }}
     
-    .avatar-border {
+    .avatar-border {{
       stroke: #7aa2f7;
       stroke-width: 3.5px;
       transition: stroke 0.3s ease;
-    }
+    }}
     
-    .avatar-container:hover .avatar-border {
+    .avatar-container:hover .avatar-border {{
       stroke: #bb9af3;
-    }
+    }}
 
-    @keyframes pulse-ring {
-      0% {
+    @keyframes pulse-ring {{
+      0% {{
         transform: scale(0.74);
         opacity: 0.85;
-      }
-      80%, 100% {
+      }}
+      80%, 100% {{
         transform: scale(0.97);
         opacity: 0;
-      }
-    }
+      }}
+    }}
   </style>
 
   <!-- Animated Bubble Rings -->
@@ -578,6 +631,7 @@ def generate_avatar():
     with open("avatar_animated.svg", "w", encoding="utf-8") as f:
         f.write(content)
     print("Generated avatar_animated.svg")
+
 
 if __name__ == "__main__":
     main()
