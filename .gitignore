@@ -1,2 +1,6 @@
 # Local preview dashboard
 preview.html
+
+# Python cache
+__pycache__/
+*.pyc

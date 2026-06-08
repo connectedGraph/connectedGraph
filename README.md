@@ -42,13 +42,9 @@
 <img src="./header_projects.svg" alt="Projects" />
 <br/>
 
-| Project | Status | Description |
-| :--- | :--- | :--- |
-| [**Zhihu Immersive Reader**](https://6767.chat/zhihu-immersive-reader/) | ![Live](https://img.shields.io/badge/Live-22c55e?style=flat-square) | Immersive reading script for Zhihu, featuring ad-blocking, AI summaries, and Markdown exports. |
-| [**Sanguosha Voice & Lines**](https://6767.chat/sgs) | ![Live](https://img.shields.io/badge/Live-22c55e?style=flat-square) | Interactive quote library for Sanguosha game, featuring dialogue search, audio playback, and admin panel. |
-| [**AIED DuoGrow SaaS**](https://github.com/connectedGraph/AIED-DuoGrow-SaaS) | ![Build](https://img.shields.io/badge/Build-f59e0b?style=flat-square) | Lightweight web application for parent-child English learning with AI-driven feedback loops. |
-| [**BrightlyPk**](https://github.com/connectedGraph/BrightlyPk) | ![Lab](https://img.shields.io/badge/Lab-8b5cf6?style=flat-square) | Node.js + WebSocket powered real-time trivia competition platform. |
-| [**Deepseek Unofficial API**](https://github.com/connectedGraph/Deepseek-unofficial-API) | ![Lab](https://img.shields.io/badge/Lab-8b5cf6?style=flat-square) | Node.js library wrapper for Deepseek Expert Mode. |
+<div align="center">
+  <img src="./projects.svg" width="100%" style="max-width: 750px;" alt="Projects" />
+</div>
 
 ---
 

@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="277" viewBox="0 0 750 277" fill="none">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <style>
+    .proj-link-anchor {
+      text-decoration: none;
+    }
+    .proj-link {
+      cursor: pointer;
+      transition: fill 0.2s ease;
+    }
+    .proj-link:hover {
+      fill: #bb9af3;
+    }
+  </style>
+
+  <!-- Background Card -->
+  <rect x="15" y="15" width="720" height="247" rx="12" fill="#1a1b26" stroke="#24283b" stroke-width="1.5" filter="url(#shadow)"/>
+
+    <!-- Row 0: Zhihu Immersive Reader -->
+    <g transform="translate(0, 0)">
+      <!-- Folder Icon -->
+      <g transform="translate(35, 38)" stroke="#7aa2f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M2 4a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4z"/>
+      </g>
+      
+      <!-- Project Name Link -->
+      <a href="https://6767.chat/zhihu-immersive-reader/" target="_blank" class="proj-link-anchor">
+        <text x="62" y="51" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="13.5" font-weight="bold" fill="#7dcfff" class="proj-link">Zhihu Immersive Reader</text>
+      </a>
+      
+      <!-- Status Badge -->
+      <rect x="245" y="39" width="48" height="17" rx="8.5" fill="#132f22"/>
+      <text x="269" y="51" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="9.5" font-weight="800" fill="#22c55e" text-anchor="middle">Live</text>
+      
+      <!-- Description -->
+      <text x="305" y="51" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" fill="#a9b1d6">Immersive reading script for Zhihu, featuring ad-blocking, AI summaries, and Markdown exports.</text>
+    </g>
+    <line x1="35" y1="71" x2="715" y2="71" stroke="#24283b" stroke-width="1"/>
+    <!-- Row 1: Sanguosha Voice & Lines -->
+    <g transform="translate(0, 0)">
+      <!-- Folder Icon -->
+      <g transform="translate(35, 80)" stroke="#7aa2f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M2 4a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4z"/>
+      </g>
+      
+      <!-- Project Name Link -->
+      <a href="https://6767.chat/sgs" target="_blank" class="proj-link-anchor">
+        <text x="62" y="93" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="13.5" font-weight="bold" fill="#7dcfff" class="proj-link">Sanguosha Voice & Lines</text>
+      </a>
+      
+      <!-- Status Badge -->
+      <rect x="245" y="81" width="48" height="17" rx="8.5" fill="#132f22"/>
+      <text x="269" y="93" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="9.5" font-weight="800" fill="#22c55e" text-anchor="middle">Live</text>
+      
+      <!-- Description -->
+      <text x="305" y="93" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" fill="#a9b1d6">Interactive quote library for Sanguosha game, featuring dialogue search, audio playback, and admin panel.</text>
+    </g>
+    <line x1="35" y1="113" x2="715" y2="113" stroke="#24283b" stroke-width="1"/>
+    <!-- Row 2: AIED DuoGrow SaaS -->
+    <g transform="translate(0, 0)">
+      <!-- Folder Icon -->
+      <g transform="translate(35, 122)" stroke="#7aa2f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M2 4a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4z"/>
+      </g>
+      
+      <!-- Project Name Link -->
+      <a href="https://github.com/connectedGraph/AIED-DuoGrow-SaaS" target="_blank" class="proj-link-anchor">
+        <text x="62" y="135" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="13.5" font-weight="bold" fill="#7dcfff" class="proj-link">AIED DuoGrow SaaS</text>
+      </a>
+      
+      <!-- Status Badge -->
+      <rect x="245" y="123" width="48" height="17" rx="8.5" fill="#352311"/>
+      <text x="269" y="135" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="9.5" font-weight="800" fill="#e0af68" text-anchor="middle">Build</text>
+      
+      <!-- Description -->
+      <text x="305" y="135" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" fill="#a9b1d6">Lightweight English learning web app with parent-child feedback loops and AI grading.</text>
+    </g>
+    <line x1="35" y1="155" x2="715" y2="155" stroke="#24283b" stroke-width="1"/>
+    <!-- Row 3: BrightlyPk -->
+    <g transform="translate(0, 0)">
+      <!-- Folder Icon -->
+      <g transform="translate(35, 164)" stroke="#7aa2f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M2 4a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4z"/>
+      </g>
+      
+      <!-- Project Name Link -->
+      <a href="https://github.com/connectedGraph/BrightlyPk" target="_blank" class="proj-link-anchor">
+        <text x="62" y="177" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="13.5" font-weight="bold" fill="#7dcfff" class="proj-link">BrightlyPk</text>
+      </a>
+      
+      <!-- Status Badge -->
+      <rect x="245" y="165" width="48" height="17" rx="8.5" fill="#24183d"/>
+      <text x="269" y="177" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="9.5" font-weight="800" fill="#bb9af3" text-anchor="middle">Lab</text>
+      
+      <!-- Description -->
+      <text x="305" y="177" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" fill="#a9b1d6">Node.js + WebSocket powered real-time multiplayer trivia competition platform.</text>
+    </g>
+    <line x1="35" y1="197" x2="715" y2="197" stroke="#24283b" stroke-width="1"/>
+    <!-- Row 4: Deepseek Unofficial API -->
+    <g transform="translate(0, 0)">
+      <!-- Folder Icon -->
+      <g transform="translate(35, 206)" stroke="#7aa2f7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M2 4a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4z"/>
+      </g>
+      
+      <!-- Project Name Link -->
+      <a href="https://github.com/connectedGraph/Deepseek-unofficial-API" target="_blank" class="proj-link-anchor">
+        <text x="62" y="219" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="13.5" font-weight="bold" fill="#7dcfff" class="proj-link">Deepseek Unofficial API</text>
+      </a>
+      
+      <!-- Status Badge -->
+      <rect x="245" y="207" width="48" height="17" rx="8.5" fill="#24183d"/>
+      <text x="269" y="219" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="9.5" font-weight="800" fill="#bb9af3" text-anchor="middle">Lab</text>
+      
+      <!-- Description -->
+      <text x="305" y="219" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" fill="#a9b1d6">Node.js library wrapper for Deepseek Expert Mode.</text>
+    </g>
+    
+</svg>
