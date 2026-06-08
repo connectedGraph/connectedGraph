@@ -65,7 +65,7 @@ def generate_projects(output_dir=".", theme="dark"):
 
     rows_html = ""
     for idx, p in enumerate(projects):
-        row_y = 50 + idx * 42
+        row_y = 52 + idx * 48
         
         # XML escape special characters for safety
         name_escaped = p['name'].replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
@@ -74,7 +74,7 @@ def generate_projects(output_dir=".", theme="dark"):
         # Draw separator line between rows (except after the last one)
         sep_line = ""
         if idx < len(projects) - 1:
-            sep_y = row_y + 21
+            sep_y = row_y + 24
             sep_line = f'<line x1="35" y1="{sep_y}" x2="715" y2="{sep_y}" stroke="{sep_stroke}" stroke-width="1"/>'
             
         bg_col = status_colors[p['status']]['bg']
@@ -95,12 +95,16 @@ def generate_projects(output_dir=".", theme="dark"):
       <text x="269" y="{row_y + 1}" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="9.5" font-weight="800" fill="{fg_col}" text-anchor="middle">{p['status']}</text>
       
       <!-- Description -->
-      <text x="305" y="{row_y + 1}" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" fill="{desc_color}">{desc_escaped}</text>
+      <foreignObject x="305" y="{row_y - 12}" width="410" height="32">
+        <div xmlns="http://www.w3.org/1999/xhtml" style="font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif; font-size: 11.5px; color: {desc_color}; line-height: 1.35; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; margin: 0; padding: 0;">
+          {desc_escaped}
+        </div>
+      </foreignObject>
     </g>
     {sep_line}
 """
 
-    content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="750" height="277" viewBox="0 0 750 277" fill="none">
+    content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="750" height="310" viewBox="0 0 750 310" fill="none">
   <defs>
     <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
       <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="{shadow_opacity}"/>
@@ -108,7 +112,7 @@ def generate_projects(output_dir=".", theme="dark"):
   </defs>
 
   <!-- Background Card -->
-  <rect x="15" y="15" width="720" height="247" rx="12" fill="{card_bg}" stroke="{card_stroke}" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="15" y="15" width="720" height="280" rx="12" fill="{card_bg}" stroke="{card_stroke}" stroke-width="1.5" filter="url(#shadow)"/>
 
 {rows_html}</svg>
 """

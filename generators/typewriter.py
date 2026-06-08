@@ -33,6 +33,9 @@ def generate_typewriter(output_dir=".", theme="dark"):
     <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
       <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="{shadow_opacity}"/>
     </filter>
+    <clipPath id="terminal-clip">
+      <rect x="16" y="16" width="718" height="283" rx="11"/>
+    </clipPath>
   </defs>
 
   <style>
@@ -231,8 +234,9 @@ def generate_typewriter(output_dir=".", theme="dark"):
   <circle cx="80" cy="35" r="6" class="btn-green"/>
   <text x="375" y="40" class="title-text" text-anchor="middle">euler@localhost:~</text>
   
-  <!-- Line 1: greet command -->
-  <text x="35" y="62" class="code-text prompt">euler~% </text>
+  <g clip-path="url(#terminal-clip)">
+    <!-- Line 1: greet command -->
+    <text x="35" y="62" class="code-text prompt">euler~% </text>
   <text x="105" y="62" class="code-text command">greet <tspan class="flag">--role</tspan> <tspan class="string">"CS Freshman"</tspan></text>
   <rect x="105" y="48" width="230" height="20" fill="{term_bg}" class="mask-rect-1"/>
   <rect x="105" y="48" width="8" height="16" class="cursor cursor1"/>
@@ -265,8 +269,9 @@ def generate_typewriter(output_dir=".", theme="dark"):
   <rect x="105" y="209" width="105" height="20" fill="{term_bg}" class="mask-rect-4"/>
   <rect x="105" y="209" width="8" height="16" class="cursor cursor4"/>
   
-  <!-- Line 9: codex output -->
-  <text x="35" y="246" class="output op5" fill="{yolo_op_color}">[YOLO Mode] Code generation full speed ahead!</text>
+    <!-- Line 9: codex output -->
+    <text x="35" y="246" class="output op5" fill="{yolo_op_color}">[YOLO Mode] Code generation full speed ahead!</text>
+  </g>
 </svg>
 """
     filepath = os.path.join(output_dir, "typewriter.svg")
