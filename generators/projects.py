@@ -59,10 +59,8 @@ def generate_projects():
         <path d="M2 4a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V4z"/>
       </g>
       
-      <!-- Project Name Link -->
-      <a href="{p['url']}" target="_blank" class="proj-link-anchor">
-        <text x="62" y="{row_y + 1}" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="13.5" font-weight="bold" fill="#7dcfff" class="proj-link">{p['name']}</text>
-      </a>
+      <!-- Project Name -->
+      <text x="62" y="{row_y + 1}" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="13.5" font-weight="bold" fill="#7dcfff">{p['name']}</text>
       
       <!-- Status Badge -->
       <rect x="245" y="{row_y - 11}" width="48" height="17" rx="8.5" fill="{p['status_bg']}"/>
@@ -80,19 +78,6 @@ def generate_projects():
       <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.5"/>
     </filter>
   </defs>
-
-  <style>
-    .proj-link-anchor {{
-      text-decoration: none;
-    }}
-    .proj-link {{
-      cursor: pointer;
-      transition: fill 0.2s ease;
-    }}
-    .proj-link:hover {{
-      fill: #bb9af3;
-    }}
-  </style>
 
   <!-- Background Card -->
   <rect x="15" y="15" width="720" height="247" rx="12" fill="#1a1b26" stroke="#24283b" stroke-width="1.5" filter="url(#shadow)"/>
