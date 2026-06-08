@@ -1,3 +1,5 @@
+from generators import load_icon_svg
+
 def generate_social_badges():
     # Globe icon (stroke-based)
     globe_path = '<circle cx="8" cy="8" r="6.5"/><path d="M1.5 8h13M8 1.5c1.5 2 1.5 11 0 13M8 1.5c-1.5 2-1.5 11 0 13"/>'
@@ -31,10 +33,24 @@ def generate_social_badges():
     }
 
     for filename, width, icon_svg, color, label, is_fill in badges:
-        if is_fill:
-            icon_content = icon_svg.replace("{color}", color)
+        local_name = label.lower()
+        if local_name == "6767.chat":
+            local_name = "website"
+            
+        import os
+        has_local = os.path.exists(os.path.join("icon svg", f"{local_name}.svg"))
+        
+        if has_local:
+            loaded_svg = load_icon_svg(local_name, icon_svg, color=color)
+            if is_fill:
+                icon_content = f'<g fill="{color}">{loaded_svg}</g>'
+            else:
+                icon_content = f'<g stroke="{color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">{loaded_svg}</g>'
         else:
-            icon_content = f'<g stroke="{color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">{icon_svg}</g>'
+            if is_fill:
+                icon_content = icon_svg.replace("{color}", color)
+            else:
+                icon_content = f'<g stroke="{color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none">{icon_svg}</g>'
         
         # Calculate horizontal centering for icon + text group
         text_w = label_widths.get(label, len(label) * 7)
