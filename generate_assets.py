@@ -8,27 +8,19 @@ def generate_typewriter():
     </filter>
     
     <clipPath id="clip1">
-      <rect x="105" y="48" width="0" height="20">
-        <animate attributeName="width" values="0; 0; 230; 230" keyTimes="0; 0.0417; 0.150; 1" dur="12s" repeatCount="indefinite"/>
-      </rect>
+      <rect x="105" y="48" height="20" class="clip-rect-1"/>
     </clipPath>
     
     <clipPath id="clip2">
-      <rect x="105" y="94" width="0" height="20">
-        <animate attributeName="width" values="0; 0; 105; 105" keyTimes="0; 0.2083; 0.2917; 1" dur="12s" repeatCount="indefinite"/>
-      </rect>
+      <rect x="105" y="94" height="20" class="clip-rect-2"/>
     </clipPath>
     
     <clipPath id="clip3">
-      <rect x="105" y="163" width="0" height="20">
-        <animate attributeName="width" values="0; 0; 335; 335" keyTimes="0; 0.375; 0.5417; 1" dur="12s" repeatCount="indefinite"/>
-      </rect>
+      <rect x="105" y="163" height="20" class="clip-rect-3"/>
     </clipPath>
     
     <clipPath id="clip4">
-      <rect x="105" y="209" width="0" height="20">
-        <animate attributeName="width" values="0; 0; 105; 105" keyTimes="0; 0.6083; 0.6917; 1" dur="12s" repeatCount="indefinite"/>
-      </rect>
+      <rect x="105" y="209" height="20" class="clip-rect-4"/>
     </clipPath>
   </defs>
 
@@ -81,76 +73,98 @@ def generate_typewriter():
       fill: #787c99;
     }
     
-    /* Cursors Animations */
+    /* Clip Rects CSS Animations (locks typing to CSS clock) */
+    .clip-rect-1 {
+      animation: type1-anim 12s infinite linear;
+    }
+    .clip-rect-2 {
+      animation: type2-anim 12s infinite linear;
+    }
+    .clip-rect-3 {
+      animation: type3-anim 12s infinite linear;
+    }
+    .clip-rect-4 {
+      animation: type4-anim 12s infinite linear;
+    }
+    
+    @keyframes type1-anim {
+      0%, 4.17% { width: 0; }
+      15.0%, 100% { width: 230px; }
+    }
+    @keyframes type2-anim {
+      0%, 20.83% { width: 0; }
+      29.17%, 100% { width: 105px; }
+    }
+    @keyframes type3-anim {
+      0%, 37.5% { width: 0; }
+      54.17%, 100% { width: 335px; }
+    }
+    @keyframes type4-anim {
+      0%, 60.83% { width: 0; }
+      69.17%, 100% { width: 105px; }
+    }
+    
+    /* Unified Cursors Animations (Combines movement and visibility to prevent drift) */
     .cursor1 {
-      animation: cur1-vis 12s infinite steps(1), cur1-pos 12s infinite linear;
+      animation: cur1-anim 12s infinite linear;
     }
     .cursor2 {
-      animation: cur2-vis 12s infinite steps(1), cur2-pos 12s infinite linear;
+      animation: cur2-anim 12s infinite linear;
     }
     .cursor3 {
-      animation: cur3-vis 12s infinite steps(1), cur3-pos 12s infinite linear;
+      animation: cur3-anim 12s infinite linear;
     }
     .cursor4 {
-      animation: cur4-vis 12s infinite steps(1), cur4-pos 12s infinite linear;
+      animation: cur4-anim 12s infinite linear;
     }
     
-    @keyframes cur1-pos {
-      0%, 4.17% { transform: translateX(0); }
-      15.0%, 100% { transform: translateX(230px); }
-    }
-    @keyframes cur1-vis {
-      0%, 4.16% { opacity: 0; }
-      4.17%, 15.0% { opacity: 1; }
-      15.5% { opacity: 0; }
-      16.0% { opacity: 1; }
-      16.5% { opacity: 0; }
-      16.67%, 100% { opacity: 0; }
+    @keyframes cur1-anim {
+      0%, 4.16% { transform: translateX(0); opacity: 0; }
+      4.17% { transform: translateX(0); opacity: 1; }
+      15.0% { transform: translateX(230px); opacity: 1; }
+      15.5% { transform: translateX(230px); opacity: 0; }
+      16.0% { transform: translateX(230px); opacity: 1; }
+      16.5% { transform: translateX(230px); opacity: 0; }
+      16.67%, 100% { transform: translateX(230px); opacity: 0; }
     }
     
-    @keyframes cur2-pos {
-      0%, 20.83% { transform: translateX(0); }
-      29.17%, 100% { transform: translateX(105px); }
-    }
-    @keyframes cur2-vis {
-      0%, 19.17% { opacity: 0; }
-      19.18%, 29.17% { opacity: 1; }
-      29.5% { opacity: 0; }
-      30.0% { opacity: 1; }
-      30.5% { opacity: 0; }
-      30.83%, 100% { opacity: 0; }
+    @keyframes cur2-anim {
+      0%, 19.17% { transform: translateX(0); opacity: 0; }
+      19.18%, 20.82% { transform: translateX(0); opacity: 1; }
+      20.83% { transform: translateX(0); opacity: 1; }
+      29.17% { transform: translateX(105px); opacity: 1; }
+      29.5% { transform: translateX(105px); opacity: 0; }
+      30.0% { transform: translateX(105px); opacity: 1; }
+      30.5% { transform: translateX(105px); opacity: 0; }
+      30.83%, 100% { transform: translateX(105px); opacity: 0; }
     }
     
-    @keyframes cur3-pos {
-      0%, 37.5% { transform: translateX(0); }
-      54.17%, 100% { transform: translateX(335px); }
-    }
-    @keyframes cur3-vis {
-      0%, 35.0% { opacity: 0; }
-      35.01%, 54.17% { opacity: 1; }
-      54.5% { opacity: 0; }
-      55.0% { opacity: 1; }
-      55.5% { opacity: 0; }
-      55.83%, 100% { opacity: 0; }
+    @keyframes cur3-anim {
+      0%, 35.0% { transform: translateX(0); opacity: 0; }
+      35.01%, 37.49% { transform: translateX(0); opacity: 1; }
+      37.5% { transform: translateX(0); opacity: 1; }
+      54.17% { transform: translateX(335px); opacity: 1; }
+      54.5% { transform: translateX(335px); opacity: 0; }
+      55.0% { transform: translateX(335px); opacity: 1; }
+      55.5% { transform: translateX(335px); opacity: 0; }
+      55.83%, 100% { transform: translateX(335px); opacity: 0; }
     }
     
-    @keyframes cur4-pos {
-      0%, 60.83% { transform: translateX(0); }
-      69.17%, 100% { transform: translateX(105px); }
-    }
-    @keyframes cur4-vis {
-      0%, 58.33% { opacity: 0; }
-      58.34%, 69.17% { opacity: 1; }
-      72.0% { opacity: 0; }
-      75.0% { opacity: 1; }
-      78.0% { opacity: 0; }
-      81.0% { opacity: 1; }
-      84.0% { opacity: 0; }
-      87.0% { opacity: 1; }
-      90.0% { opacity: 0; }
-      93.0% { opacity: 1; }
-      96.0% { opacity: 0; }
-      99.0%, 100% { opacity: 1; }
+    @keyframes cur4-anim {
+      0%, 58.33% { transform: translateX(0); opacity: 0; }
+      58.34%, 60.82% { transform: translateX(0); opacity: 1; }
+      60.83% { transform: translateX(0); opacity: 1; }
+      69.17% { transform: translateX(105px); opacity: 1; }
+      72.0% { transform: translateX(105px); opacity: 0; }
+      75.0% { transform: translateX(105px); opacity: 1; }
+      78.0% { transform: translateX(105px); opacity: 0; }
+      81.0% { transform: translateX(105px); opacity: 1; }
+      84.0% { transform: translateX(105px); opacity: 0; }
+      87.0% { transform: translateX(105px); opacity: 1; }
+      90.0% { transform: translateX(105px); opacity: 0; }
+      93.0% { transform: translateX(105px); opacity: 1; }
+      96.0% { transform: translateX(105px); opacity: 0; }
+      99.0%, 100% { transform: translateX(105px); opacity: 1; }
     }
     
     /* Outputs Animations */
@@ -271,17 +285,11 @@ def generate_header(name, filename, svg_path):
 
 def main():
     # Icons
-    # Code brackets for Tech Stack
     tech_path = '<path d="M16 18l6-6-6-6M8 6L2 12l6 6" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
-    # Folder / Rocket for Projects
     projects_path = '<path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z" stroke="url(#header-grad)" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M12 11l2 2-2 2" stroke="url(#header-grad)" stroke-width="2" stroke-linecap="round" fill="none"/>'
-    # Cloud for Public APIs
     apis_path = '<path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="url(#header-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
-    # Activity for GitHub Stats
     stats_path = '<path d="M18 20V10M12 20V4M6 20v-6" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
-    # List for Roadmap
     roadmap_path = '<path d="M9 6h11M9 12h11M9 18h11M5 6v.01M5 12v.01M5 18v.01" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
-    # Message-circle for Ask Me Anything
     ask_path = '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="url(#header-grad)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>'
 
     generate_typewriter()
