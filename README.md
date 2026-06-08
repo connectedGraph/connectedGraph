@@ -115,22 +115,10 @@ POST https://6767.chat/api/speech-score       → Youdao speech assessment proxy
 <br/>
 
 <div align="center">
-  <table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 800px;">
-    <tr>
-      <td valign="top" width="50%" style="padding-right: 10px;">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=connectedGraph&theme=tokyonight">
-          <img alt="Profile Details" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=connectedGraph&theme=default" width="100%" style="border-radius: 10px;">
-        </picture>
-      </td>
-      <td valign="top" width="50%" style="padding-left: 10px;">
-        <picture>
-          <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=connectedGraph&theme=tokyonight&hide_border=true&background=1a1b26&ring=7aa2f7&fire=f7768e&currStreakLabel=a9b1d6">
-          <img alt="Streak Stats" src="https://streak-stats.demolab.com?user=connectedGraph&theme=default&hide_border=true" width="100%" style="border-radius: 10px;">
-        </picture>
-      </td>
-    </tr>
-  </table>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=connectedGraph&theme=tokyonight&hide_border=true&background=1a1b26&ring=7aa2f7&fire=f7768e&currStreakLabel=a9b1d6">
+    <img alt="Streak Stats" src="https://streak-stats.demolab.com?user=connectedGraph&theme=default&hide_border=true" width="100%" style="max-width: 800px; border-radius: 10px;">
+  </picture>
 </div>
 
 ---
@@ -162,12 +150,20 @@ Later→ Documentation & Portals: Launching public guides for SGS, Shizuku, and 
 > My homepage integrates personal notes, blogs, and custom knowledge bases. Feel free to ask Claude about me directly!
 
 <div align="center">
-  <a href="https://6767.chat/#about"><img src="https://img.shields.io/badge/🤖_Ask_Me_via_Claude-6767.chat%2F%23about-7c3aed?style=for-the-badge" alt="Ask Me" /></a>
+  <a href="https://6767.chat/#about">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./dark/ask_me_badge.svg">
+      <img alt="Ask Me via Claude" src="./light/ask_me_badge.svg">
+    </picture>
+  </a>
 </div>
 
 <br/>
 <br/>
 
 <div align="center">
-  <em>Built with ❤️ by Euler Rap (connectedGraph) &bull; 6767.chat</em>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./dark/footer.svg">
+    <img alt="Built with love by Euler Rap" src="./light/footer.svg" width="100%" style="max-width: 750px;">
+  </picture>
 </div>

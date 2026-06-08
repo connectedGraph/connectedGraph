@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="750" height="52" viewBox="0 0 750 52" fill="none">
+  <defs>
+    <radialGradient id="heart-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(247,118,142,0.18)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <filter id="subtle-shadow" x="-2%" y="-5%" width="104%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Card background -->
+  <rect x="1" y="1" width="748" height="50" rx="10"
+        fill="#1a1b26" stroke="#24283b" stroke-width="1" filter="url(#subtle-shadow)"/>
+
+  <!-- Subtle top divider line accent -->
+  <line x1="40" y1="1" x2="710" y2="1" stroke="#f7768e" stroke-width="1.5" stroke-opacity="0.35"/>
+
+  <!-- Heart glow halo -->
+  <ellipse cx="375" cy="26" rx="28" ry="18" fill="url(#heart-glow)"/>
+
+  <!-- "Built with" -->
+  <text x="233" y="31"
+        font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif"
+        font-size="13" font-weight="500" fill="#a9b1d6" text-anchor="middle">Built with</text>
+
+  <!-- Heart icon centred -->
+  <g transform="translate(259, 18) scale(0.9375)">
+    <path d="M8 14s-6-3.8-6-8a4 4 0 0 1 6-3.44A4 4 0 0 1 14 6c0 4.2-6 8-6 8z" fill="#f7768e" stroke="none"/>
+  </g>
+
+  <!-- "by" -->
+  <text x="286" y="31"
+        font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif"
+        font-size="13" font-weight="500" fill="#a9b1d6">by</text>
+
+  <!-- Author name -->
+  <text x="305" y="31"
+        font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif"
+        font-size="13" font-weight="700" fill="#7aa2f7">Euler Rap</text>
+
+  <!-- (connectedGraph) -->
+  <text x="385" y="31"
+        font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif"
+        font-size="12" font-weight="400" fill="#a9b1d6">(connectedGraph)</text>
+
+  <!-- Bullet separator -->
+  <circle cx="487" cy="26" r="2.5" fill="#3b4261"/>
+
+  <!-- Link -->
+  <text x="499" y="31"
+        font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif"
+        font-size="13" font-weight="600" fill="#7dcfff">6767.chat</text>
+
+  <!-- Underline for link -->
+  <line x1="499" y1="33" x2="551" y2="33" stroke="#7dcfff" stroke-width="1" stroke-opacity="0.5"/>
+</svg>
