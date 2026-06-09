@@ -1,0 +1,566 @@
+[
+  {
+    "slug": "amazonwebservices",
+    "label": "AWS",
+    "subfolder": "cloud",
+    "color": "#232F3E"
+  },
+  {
+    "slug": "microsoftazure",
+    "label": "Azure",
+    "subfolder": "cloud",
+    "color": "#888888"
+  },
+  {
+    "slug": "cloudflare",
+    "label": "Cloudflare",
+    "subfolder": "cloud",
+    "color": "#F38020"
+  },
+  {
+    "slug": "digitalocean",
+    "label": "DigitalOcean",
+    "subfolder": "cloud",
+    "color": "#0080FF"
+  },
+  {
+    "slug": "docker",
+    "label": "Docker",
+    "subfolder": "cloud",
+    "color": "#2496ED"
+  },
+  {
+    "slug": "git",
+    "label": "Git",
+    "subfolder": "cloud",
+    "color": "#F05032"
+  },
+  {
+    "slug": "github",
+    "label": "GitHub",
+    "subfolder": "cloud",
+    "color": "#181717"
+  },
+  {
+    "slug": "gitlab",
+    "label": "GitLab",
+    "subfolder": "cloud",
+    "color": "#FC6D26"
+  },
+  {
+    "slug": "googlecloud",
+    "label": "Google Cloud",
+    "subfolder": "cloud",
+    "color": "#4285F4"
+  },
+  {
+    "slug": "heroku",
+    "label": "Heroku",
+    "subfolder": "cloud",
+    "color": "#430098"
+  },
+  {
+    "slug": "kubernetes",
+    "label": "Kubernetes",
+    "subfolder": "cloud",
+    "color": "#326CE5"
+  },
+  {
+    "slug": "linux",
+    "label": "Linux",
+    "subfolder": "cloud",
+    "color": "#FCC624"
+  },
+  {
+    "slug": "netlify",
+    "label": "Netlify",
+    "subfolder": "cloud",
+    "color": "#00C7B7"
+  },
+  {
+    "slug": "nginx",
+    "label": "Nginx",
+    "subfolder": "cloud",
+    "color": "#009639"
+  },
+  {
+    "slug": "terraform",
+    "label": "Terraform",
+    "subfolder": "cloud",
+    "color": "#844FBA"
+  },
+  {
+    "slug": "vercel",
+    "label": "Vercel",
+    "subfolder": "cloud",
+    "color": "#000000"
+  },
+  {
+    "slug": "dotnet",
+    "label": ".NET",
+    "subfolder": "code",
+    "color": "#888888"
+  },
+  {
+    "slug": "angular",
+    "label": "Angular",
+    "subfolder": "code",
+    "color": "#0F0F11"
+  },
+  {
+    "slug": "astro",
+    "label": "Astro",
+    "subfolder": "code",
+    "color": "#BC52EE"
+  },
+  {
+    "slug": "c",
+    "label": "C",
+    "subfolder": "code",
+    "color": "#00599C"
+  },
+  {
+    "slug": "sharp",
+    "label": "C#",
+    "subfolder": "code",
+    "color": "#99CC00"
+  },
+  {
+    "slug": "cplusplus",
+    "label": "C++",
+    "subfolder": "code",
+    "color": "#888888"
+  },
+  {
+    "slug": "dart",
+    "label": "Dart",
+    "subfolder": "code",
+    "color": "#0175C2"
+  },
+  {
+    "slug": "django",
+    "label": "Django",
+    "subfolder": "code",
+    "color": "#092E20"
+  },
+  {
+    "slug": "elixir",
+    "label": "Elixir",
+    "subfolder": "code",
+    "color": "#4B275F"
+  },
+  {
+    "slug": "fastapi",
+    "label": "FastAPI",
+    "subfolder": "code",
+    "color": "#009688"
+  },
+  {
+    "slug": "flask",
+    "label": "Flask",
+    "subfolder": "code",
+    "color": "#000000"
+  },
+  {
+    "slug": "gatsby",
+    "label": "Gatsby",
+    "subfolder": "code",
+    "color": "#663399"
+  },
+  {
+    "slug": "go",
+    "label": "Go",
+    "subfolder": "code",
+    "color": "#00ADD8"
+  },
+  {
+    "slug": "haskell",
+    "label": "Haskell",
+    "subfolder": "code",
+    "color": "#5D4F85"
+  },
+  {
+    "slug": "openjdk",
+    "label": "Java",
+    "subfolder": "code",
+    "color": "#000000"
+  },
+  {
+    "slug": "kotlin",
+    "label": "Kotlin",
+    "subfolder": "code",
+    "color": "#7F52FF"
+  },
+  {
+    "slug": "laravel",
+    "label": "Laravel",
+    "subfolder": "code",
+    "color": "#FF2D20"
+  },
+  {
+    "slug": "lua",
+    "label": "Lua",
+    "subfolder": "code",
+    "color": "#2C2D72"
+  },
+  {
+    "slug": "nestjs",
+    "label": "NestJS",
+    "subfolder": "code",
+    "color": "#E0234E"
+  },
+  {
+    "slug": "nuxt",
+    "label": "Nuxt",
+    "subfolder": "code",
+    "color": "#00DC82"
+  },
+  {
+    "slug": "perl",
+    "label": "Perl",
+    "subfolder": "code",
+    "color": "#0073A1"
+  },
+  {
+    "slug": "php",
+    "label": "PHP",
+    "subfolder": "code",
+    "color": "#777BB4"
+  },
+  {
+    "slug": "r",
+    "label": "R",
+    "subfolder": "code",
+    "color": "#276DC3"
+  },
+  {
+    "slug": "rubyonrails",
+    "label": "Rails",
+    "subfolder": "code",
+    "color": "#D30001"
+  },
+  {
+    "slug": "remix",
+    "label": "Remix",
+    "subfolder": "code",
+    "color": "#000000"
+  },
+  {
+    "slug": "ruby",
+    "label": "Ruby",
+    "subfolder": "code",
+    "color": "#CC342D"
+  },
+  {
+    "slug": "rust",
+    "label": "Rust",
+    "subfolder": "code",
+    "color": "#000000"
+  },
+  {
+    "slug": "sass",
+    "label": "Sass",
+    "subfolder": "code",
+    "color": "#CC6699"
+  },
+  {
+    "slug": "scala",
+    "label": "Scala",
+    "subfolder": "code",
+    "color": "#DC322F"
+  },
+  {
+    "slug": "solid",
+    "label": "SolidJS",
+    "subfolder": "code",
+    "color": "#2C4F7C"
+  },
+  {
+    "slug": "spring",
+    "label": "Spring",
+    "subfolder": "code",
+    "color": "#6DB33F"
+  },
+  {
+    "slug": "svelte",
+    "label": "Svelte",
+    "subfolder": "code",
+    "color": "#FF3E00"
+  },
+  {
+    "slug": "swift",
+    "label": "Swift",
+    "subfolder": "code",
+    "color": "#F05138"
+  },
+  {
+    "slug": "tailwindcss",
+    "label": "Tailwind",
+    "subfolder": "code",
+    "color": "#06B6D4"
+  },
+  {
+    "slug": "typescript",
+    "label": "TypeScript",
+    "subfolder": "code",
+    "color": "#3178C6"
+  },
+  {
+    "slug": "vite",
+    "label": "Vite",
+    "subfolder": "code",
+    "color": "#646CFF"
+  },
+  {
+    "slug": "vuedotjs",
+    "label": "Vue.js",
+    "subfolder": "code",
+    "color": "#888888"
+  },
+  {
+    "slug": "webpack",
+    "label": "Webpack",
+    "subfolder": "code",
+    "color": "#8DD6F9"
+  },
+  {
+    "slug": "bilibili",
+    "label": "Bilibili",
+    "subfolder": "contact",
+    "color": "#00A1D6"
+  },
+  {
+    "slug": "devdotto",
+    "label": "Dev.to",
+    "subfolder": "contact",
+    "color": "#888888"
+  },
+  {
+    "slug": "discord",
+    "label": "Discord",
+    "subfolder": "contact",
+    "color": "#5865F2"
+  },
+  {
+    "slug": "dribbble",
+    "label": "Dribbble",
+    "subfolder": "contact",
+    "color": "#EA4C89"
+  },
+  {
+    "slug": "gmail",
+    "label": "Email",
+    "subfolder": "contact",
+    "color": "#EA4335"
+  },
+  {
+    "slug": "instagram",
+    "label": "Instagram",
+    "subfolder": "contact",
+    "color": "#FF0069"
+  },
+  {
+    "slug": "linkedin",
+    "label": "LinkedIn",
+    "subfolder": "contact",
+    "color": "#888888"
+  },
+  {
+    "slug": "mastodon",
+    "label": "Mastodon",
+    "subfolder": "contact",
+    "color": "#6364FF"
+  },
+  {
+    "slug": "medium",
+    "label": "Medium",
+    "subfolder": "contact",
+    "color": "#000000"
+  },
+  {
+    "slug": "slack",
+    "label": "Slack",
+    "subfolder": "contact",
+    "color": "#4A154B"
+  },
+  {
+    "slug": "stackoverflow",
+    "label": "StackOverflow",
+    "subfolder": "contact",
+    "color": "#F58025"
+  },
+  {
+    "slug": "substack",
+    "label": "Substack",
+    "subfolder": "contact",
+    "color": "#FF6719"
+  },
+  {
+    "slug": "telegram",
+    "label": "Telegram",
+    "subfolder": "contact",
+    "color": "#26A5E4"
+  },
+  {
+    "slug": "twitch",
+    "label": "Twitch",
+    "subfolder": "contact",
+    "color": "#9146FF"
+  },
+  {
+    "slug": "wechat",
+    "label": "WeChat",
+    "subfolder": "contact",
+    "color": "#07C160"
+  },
+  {
+    "slug": "sinaweibo",
+    "label": "Weibo",
+    "subfolder": "contact",
+    "color": "#E6162D"
+  },
+  {
+    "slug": "x",
+    "label": "X (Twitter)",
+    "subfolder": "contact",
+    "color": "#000000"
+  },
+  {
+    "slug": "youtube",
+    "label": "YouTube",
+    "subfolder": "contact",
+    "color": "#FF0000"
+  },
+  {
+    "slug": "elasticsearch",
+    "label": "Elastic",
+    "subfolder": "db",
+    "color": "#005571"
+  },
+  {
+    "slug": "firebase",
+    "label": "Firebase",
+    "subfolder": "db",
+    "color": "#DD2C00"
+  },
+  {
+    "slug": "mariadb",
+    "label": "MariaDB",
+    "subfolder": "db",
+    "color": "#003545"
+  },
+  {
+    "slug": "mongodb",
+    "label": "MongoDB",
+    "subfolder": "db",
+    "color": "#47A248"
+  },
+  {
+    "slug": "mysql",
+    "label": "MySQL",
+    "subfolder": "db",
+    "color": "#4479A1"
+  },
+  {
+    "slug": "postgresql",
+    "label": "PostgreSQL",
+    "subfolder": "db",
+    "color": "#4169E1"
+  },
+  {
+    "slug": "redis",
+    "label": "Redis",
+    "subfolder": "db",
+    "color": "#FF4438"
+  },
+  {
+    "slug": "sqlite",
+    "label": "SQLite",
+    "subfolder": "db",
+    "color": "#003B57"
+  },
+  {
+    "slug": "supabase",
+    "label": "Supabase",
+    "subfolder": "db",
+    "color": "#3FCF8E"
+  },
+  {
+    "slug": "anthropic",
+    "label": "Anthropic",
+    "subfolder": "devtools",
+    "color": "#191919"
+  },
+  {
+    "slug": "googlegemini",
+    "label": "Gemini",
+    "subfolder": "devtools",
+    "color": "#8E75B2"
+  },
+  {
+    "slug": "huggingface",
+    "label": "HuggingFace",
+    "subfolder": "devtools",
+    "color": "#FFD21E"
+  },
+  {
+    "slug": "intellijidea",
+    "label": "IntelliJ",
+    "subfolder": "devtools",
+    "color": "#000000"
+  },
+  {
+    "slug": "jetbrains",
+    "label": "JetBrains",
+    "subfolder": "devtools",
+    "color": "#000000"
+  },
+  {
+    "slug": "neovim",
+    "label": "Neovim",
+    "subfolder": "devtools",
+    "color": "#57A143"
+  },
+  {
+    "slug": "ollama",
+    "label": "Ollama",
+    "subfolder": "devtools",
+    "color": "#000000"
+  },
+  {
+    "slug": "openai",
+    "label": "OpenAI",
+    "subfolder": "devtools",
+    "color": "#412991"
+  },
+  {
+    "slug": "pycharm",
+    "label": "PyCharm",
+    "subfolder": "devtools",
+    "color": "#000000"
+  },
+  {
+    "slug": "pytorch",
+    "label": "PyTorch",
+    "subfolder": "devtools",
+    "color": "#EE4C2C"
+  },
+  {
+    "slug": "tensorflow",
+    "label": "TensorFlow",
+    "subfolder": "devtools",
+    "color": "#FF6F00"
+  },
+  {
+    "slug": "vim",
+    "label": "Vim",
+    "subfolder": "devtools",
+    "color": "#019733"
+  },
+  {
+    "slug": "vscodium",
+    "label": "VS Code",
+    "subfolder": "devtools",
+    "color": "#2F80ED"
+  }
+]

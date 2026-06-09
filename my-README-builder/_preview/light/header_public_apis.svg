@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="50" fill="none">
+  <defs>
+    <linearGradient id="header-grad" x1="0" y1="0" x2="200" y2="0" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0366d6"/>
+      <stop offset="100%" stop-color="#6f42c1"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Icon -->
+  <g transform="translate(10, 10)">
+    <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="45" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="19" font-weight="bold" fill="#0366d6" letter-spacing="0.5">Public Apis</text>
+  
+  <!-- Underline -->
+  <rect x="45" y="36" width="60" height="3" rx="1.5" fill="url(#header-grad)"/>
+</svg>

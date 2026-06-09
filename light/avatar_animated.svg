@@ -18,7 +18,7 @@
       stroke-width: 1.5px;
       opacity: 0.85;
       transform-origin: 80px 80px;
-      animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      animation: pulse-ring 4.0s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
     }
     
     .bubble-ring-2 {
@@ -26,7 +26,7 @@
       stroke-width: 1.2px;
       opacity: 0.6;
       transform-origin: 80px 80px;
-      animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      animation: pulse-ring 4.0s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
       animation-delay: 1.3s;
     }
     
@@ -35,7 +35,7 @@
       stroke-width: 1px;
       opacity: 0.35;
       transform-origin: 80px 80px;
-      animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      animation: pulse-ring 4.0s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
       animation-delay: 2.6s;
     }
     

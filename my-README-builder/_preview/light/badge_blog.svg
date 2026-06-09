@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="28" fill="none">
+  <rect x="0.5" y="0.5" width="71" height="27" rx="14" fill="#ffffff" stroke="#d1d5db" stroke-width="1"/>
+  <g transform="translate(12.0, 6)">
+    <g stroke="#6f42c1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M11.5 1.5a1.5 1.5 0 1 1 2 2L4.5 12.5 1.5 13.5l1-3zM10 3l3 3"/></g>
+  </g>
+  <text x="34.0" y="18" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#24292e">Blog</text>
+</svg>
