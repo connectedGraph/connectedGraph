@@ -1,6 +1,6 @@
 import os
 
-def generate_avatar(output_dir=".", theme="dark"):
+def generate_avatar(output_dir=".", theme="dark", **kwargs):
     import base64
     try:
         with open("avatar.jpg", "rb") as image_file:
@@ -10,18 +10,20 @@ def generate_avatar(output_dir=".", theme="dark"):
         print(f"Warning: Could not read avatar.jpg: {e}")
         image_href = "./avatar.jpg" # fallback
 
+    pulse_duration = float(kwargs.get("pulse_duration", 4))
+
     if theme == "light":
-        ring1 = "#0366d6"
-        ring2 = "#6f42c1"
-        ring3 = "#005cc5"
-        border = "#0366d6"
-        border_hover = "#6f42c1"
+        ring1  = kwargs.get("ring_color_1", "#0366d6")
+        ring2  = kwargs.get("ring_color_2", "#6f42c1")
+        ring3  = kwargs.get("ring_color_3", "#005cc5")
+        border = kwargs.get("ring_color_1", "#0366d6")
+        border_hover = kwargs.get("ring_color_2", "#6f42c1")
     else:
-        ring1 = "#7aa2f7"
-        ring2 = "#bb9af3"
-        ring3 = "#7dcfff"
-        border = "#7aa2f7"
-        border_hover = "#bb9af3"
+        ring1  = kwargs.get("ring_color_1", "#7aa2f7")
+        ring2  = kwargs.get("ring_color_2", "#bb9af3")
+        ring3  = kwargs.get("ring_color_3", "#7dcfff")
+        border = kwargs.get("ring_color_1", "#7aa2f7")
+        border_hover = kwargs.get("ring_color_2", "#bb9af3")
 
     # We will embed the local avatar.jpg by wrapping it inside an SVG pattern mask
     content = f"""<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none">
@@ -44,7 +46,7 @@ def generate_avatar(output_dir=".", theme="dark"):
       stroke-width: 1.5px;
       opacity: 0.85;
       transform-origin: 80px 80px;
-      animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      animation: pulse-ring {pulse_duration}s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
     }}
     
     .bubble-ring-2 {{
@@ -52,7 +54,7 @@ def generate_avatar(output_dir=".", theme="dark"):
       stroke-width: 1.2px;
       opacity: 0.6;
       transform-origin: 80px 80px;
-      animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      animation: pulse-ring {pulse_duration}s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
       animation-delay: 1.3s;
     }}
     
@@ -61,7 +63,7 @@ def generate_avatar(output_dir=".", theme="dark"):
       stroke-width: 1px;
       opacity: 0.35;
       transform-origin: 80px 80px;
-      animation: pulse-ring 4s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      animation: pulse-ring {pulse_duration}s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
       animation-delay: 2.6s;
     }}
     

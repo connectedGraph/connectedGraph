@@ -1,6 +1,7 @@
 import os
 
-def generate_typewriter(output_dir=".", theme="dark"):
+def generate_typewriter(output_dir=".", theme="dark", **kwargs):
+    animation_duration = float(kwargs.get("animation_duration", 12))
     if theme == "light":
         term_bg = "#f6f8fa"
         term_stroke = "#d1d5db"
@@ -89,16 +90,16 @@ def generate_typewriter(output_dir=".", theme="dark"):
     
     /* Sliding Mask Rects (locked to cursor keyframes) */
     .mask-rect-1 {{
-      animation: mask1-anim 12s infinite linear;
+      animation: mask1-anim {animation_duration}s infinite linear;
     }}
     .mask-rect-2 {{
-      animation: mask2-anim 12s infinite linear;
+      animation: mask2-anim {animation_duration}s infinite linear;
     }}
     .mask-rect-3 {{
-      animation: mask3-anim 12s infinite linear;
+      animation: mask3-anim {animation_duration}s infinite linear;
     }}
     .mask-rect-4 {{
-      animation: mask4-anim 12s infinite linear;
+      animation: mask4-anim {animation_duration}s infinite linear;
     }}
     
     @keyframes mask1-anim {{
@@ -120,16 +121,16 @@ def generate_typewriter(output_dir=".", theme="dark"):
     
     /* Unified Cursors Animations (Combines movement and visibility to prevent drift) */
     .cursor1 {{
-      animation: cur1-anim 12s infinite linear;
+      animation: cur1-anim {animation_duration}s infinite linear;
     }}
     .cursor2 {{
-      animation: cur2-anim 12s infinite linear;
+      animation: cur2-anim {animation_duration}s infinite linear;
     }}
     .cursor3 {{
-      animation: cur3-anim 12s infinite linear;
+      animation: cur3-anim {animation_duration}s infinite linear;
     }}
     .cursor4 {{
-      animation: cur4-anim 12s infinite linear;
+      animation: cur4-anim {animation_duration}s infinite linear;
     }}
     
     @keyframes cur1-anim {{
@@ -182,15 +183,15 @@ def generate_typewriter(output_dir=".", theme="dark"):
     }}
     
     /* Outputs Animations */
-    .op1 {{ animation: op1-anim 12s infinite; }}
-    .op2 {{ animation: op2-anim 12s infinite; }}
-    .op3 {{ animation: op3-anim 12s infinite; }}
-    .op4 {{ animation: op4-anim 12s infinite; }}
-    .op5 {{ animation: op5-anim 12s infinite; }}
+    .op1 {{ animation: op1-anim {animation_duration}s infinite; }}
+    .op2 {{ animation: op2-anim {animation_duration}s infinite; }}
+    .op3 {{ animation: op3-anim {animation_duration}s infinite; }}
+    .op4 {{ animation: op4-anim {animation_duration}s infinite; }}
+    .op5 {{ animation: op5-anim {animation_duration}s infinite; }}
     
-    .pr2 {{ animation: pr2-anim 12s infinite; }}
-    .pr3 {{ animation: pr3-anim 12s infinite; }}
-    .pr4 {{ animation: pr4-anim 12s infinite; }}
+    .pr2 {{ animation: pr2-anim {animation_duration}s infinite; }}
+    .pr3 {{ animation: pr3-anim {animation_duration}s infinite; }}
+    .pr4 {{ animation: pr4-anim {animation_duration}s infinite; }}
     
     @keyframes op1-anim {{
       0%, 16.67% {{ opacity: 0; }}

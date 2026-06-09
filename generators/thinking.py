@@ -1,6 +1,6 @@
 import os
 
-def generate_thinking_header(output_dir=".", theme="dark"):
+def generate_thinking_header(output_dir=".", theme="dark", **kwargs):
     spinner_symbols = ['✻', '✺', '✹', '✸', '✶', '✶', '✦', '✶', '✶', '✸', '✹', '✺']
     words = [
         'Cogitating',
@@ -23,14 +23,16 @@ def generate_thinking_header(output_dir=".", theme="dark"):
         'Vibing'
     ]
 
+    spin_duration = float(kwargs.get("spin_duration", 2.4))
+
     if theme == "light":
         text_color = "#24292e"
-        spin_color = "#005cc5"
-        sweep_gradient = "linear-gradient(90deg, #005cc5 0%, #005cc5 38%, #c8e1ff 50%, #005cc5 62%, #005cc5 100%)"
+        spin_color = kwargs.get("sweep_color", "#005cc5")
+        sweep_gradient = f"linear-gradient(90deg, {spin_color} 0%, {spin_color} 38%, #c8e1ff 50%, {spin_color} 62%, {spin_color} 100%)"
     else:
         text_color = "#c9d1d9"
-        spin_color = "#22d3ee"
-        sweep_gradient = "linear-gradient(90deg, #22d3ee 0%, #22d3ee 38%, #e3fbff 50%, #22d3ee 62%, #22d3ee 100%)"
+        spin_color = kwargs.get("sweep_color", "#22d3ee")
+        sweep_gradient = f"linear-gradient(90deg, {spin_color} 0%, {spin_color} 38%, #e3fbff 50%, {spin_color} 62%, {spin_color} 100%)"
 
     # Generate 18 rows. Each row has its own spinner and verb.
     rows_html = ""
@@ -40,7 +42,7 @@ def generate_thinking_header(output_dir=".", theme="dark"):
         # Generate spinner spans for this row
         spinner_spans = ""
         for s_idx, char in enumerate(spinner_symbols):
-            s_delay = (s_idx - len(spinner_symbols)) * 0.2
+            s_delay = (s_idx - len(spinner_symbols)) * (spin_duration / len(spinner_symbols))
             spinner_spans += f'            <span class="cc-spin" style="animation-delay: {s_delay:.1f}s;">{char}</span>\n'
             
         rows_html += f"""          <div class="cc-row" style="animation-delay: {row_delay}s;">
@@ -103,7 +105,7 @@ def generate_thinking_header(output_dir=".", theme="dark"):
           line-height: 1;
           opacity: 0;
           visibility: hidden;
-          animation: spin-step 2.4s infinite linear;
+          animation: spin-step {spin_duration}s infinite linear;
         }}
         .cc-label {{
           white-space: nowrap;

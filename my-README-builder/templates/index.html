@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>README Builder · connectedGraph</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="/static/css/style.css"/>
+</head>
+<body>
+
+<!-- ── Top Bar ── -->
+<header class="topbar">
+  <div class="topbar-left">
+    <div class="logo">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+      </svg>
+      <span>README Builder</span>
+    </div>
+    <span class="topbar-sub">connectedGraph / profile</span>
+  </div>
+  <div class="topbar-right">
+    <div class="theme-toggle" id="previewThemeToggle" title="Toggle preview theme">
+      <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+      <div class="toggle-track" id="themeToggleTrack"><div class="toggle-thumb"></div></div>
+      <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </div>
+    <button class="btn-build" id="buildAllBtn">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      Build All
+    </button>
+  </div>
+</header>
+
+<!-- ── Layout ── -->
+<div class="layout">
+
+  <!-- Left: Component Nav -->
+  <aside class="sidebar">
+    <div class="sidebar-section-label">Components</div>
+    <nav class="component-nav" id="componentNav">
+      <button class="nav-item active" data-component="typewriter">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+        Terminal
+      </button>
+      <button class="nav-item" data-component="avatar">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        Avatar
+      </button>
+      <button class="nav-item" data-component="thinking">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Thinking UI
+      </button>
+      <button class="nav-item" data-component="api_docs">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        API Docs Card
+      </button>
+      <button class="nav-item" data-component="footer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        Footer
+      </button>
+      <button class="nav-item" data-component="ask_me_badge">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        Ask Me Badge
+      </button>
+    </nav>
+
+    <div class="sidebar-section-label" style="margin-top:20px;">Headers</div>
+    <nav class="component-nav" id="headerNav">
+      <button class="nav-item" data-component="header_tech_stack">Tech Stack</button>
+      <button class="nav-item" data-component="header_projects">Projects</button>
+      <button class="nav-item" data-component="header_public_apis">Public APIs</button>
+      <button class="nav-item" data-component="header_stats">GitHub Stats</button>
+      <button class="nav-item" data-component="header_roadmap">Roadmap</button>
+      <button class="nav-item" data-component="header_ask_me">Ask Me</button>
+    </nav>
+  </aside>
+
+  <!-- Center: Preview -->
+  <main class="preview-area">
+    <div class="preview-header">
+      <div class="preview-label" id="previewLabel">Terminal Animation</div>
+      <div class="preview-actions">
+        <button class="btn-icon" id="refreshPreviewBtn" title="Refresh preview">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+        </button>
+        <div class="both-tag">Both themes</div>
+      </div>
+    </div>
+
+    <!-- Dual preview -->
+    <div class="preview-dual">
+      <div class="preview-card dark-card">
+        <div class="preview-card-label">🌙 Dark</div>
+        <div class="preview-canvas" id="darkPreview">
+          <div class="preview-placeholder">
+            <div class="spinner"></div>
+            <span>Generating preview…</span>
+          </div>
+        </div>
+      </div>
+      <div class="preview-card light-card">
+        <div class="preview-card-label">☀️ Light</div>
+        <div class="preview-canvas" id="lightPreview">
+          <div class="preview-placeholder">
+            <div class="spinner"></div>
+            <span>Generating preview…</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Build log -->
+    <div class="build-log" id="buildLog" style="display:none;">
+      <div class="build-log-header">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Build Log
+        <button class="build-log-close" id="buildLogClose">✕</button>
+      </div>
+      <div class="build-log-body" id="buildLogBody"></div>
+    </div>
+  </main>
+
+  <!-- Right: Controls -->
+  <aside class="controls-panel">
+    <div class="controls-title">Parameters</div>
+
+    <!-- ── Terminal Controls ── -->
+    <div class="control-group" id="ctrl-typewriter">
+      <div class="control-section-label">Animation Speed</div>
+      <div class="control-row">
+        <label class="ctrl-label">Loop duration</label>
+        <div class="ctrl-slider-row">
+          <input type="range" id="tw-duration" min="6" max="30" step="1" value="12" class="slider"/>
+          <span class="slider-value" id="tw-duration-val">12s</span>
+        </div>
+      </div>
+      <div class="control-hint">Lower = faster typing animation cycle</div>
+
+      <div class="control-section-label" style="margin-top:16px;">Colors</div>
+      <div class="control-row">
+        <label class="ctrl-label">Prompt color</label>
+        <input type="color" value="#7dcfff" class="color-picker" id="tw-prompt-color" disabled/>
+      </div>
+      <div class="ctrl-chip-group" id="tw-speed-presets">
+        <span class="ctrl-section-sub">Speed Presets</span>
+        <div class="chip-row">
+          <button class="chip active" data-val="8" data-target="tw-duration">⚡ Fast</button>
+          <button class="chip" data-val="12" data-target="tw-duration">Normal</button>
+          <button class="chip" data-val="20" data-target="tw-duration">🐢 Slow</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Avatar Controls ── -->
+    <div class="control-group hidden" id="ctrl-avatar">
+      <div class="control-section-label">Pulse Animation</div>
+      <div class="control-row">
+        <label class="ctrl-label">Pulse speed</label>
+        <div class="ctrl-slider-row">
+          <input type="range" id="av-pulse" min="1.5" max="8" step="0.5" value="4" class="slider"/>
+          <span class="slider-value" id="av-pulse-val">4s</span>
+        </div>
+      </div>
+
+      <div class="control-section-label" style="margin-top:16px;">Ring Colors</div>
+      <div class="control-row">
+        <label class="ctrl-label">Ring 1 (inner)</label>
+        <input type="color" value="#7aa2f7" class="color-picker" id="av-ring1"/>
+      </div>
+      <div class="control-row">
+        <label class="ctrl-label">Ring 2 (mid)</label>
+        <input type="color" value="#bb9af3" class="color-picker" id="av-ring2"/>
+      </div>
+      <div class="control-row">
+        <label class="ctrl-label">Ring 3 (outer)</label>
+        <input type="color" value="#7dcfff" class="color-picker" id="av-ring3"/>
+      </div>
+
+      <div class="control-section-label" style="margin-top:16px;">Color Presets</div>
+      <div class="chip-row">
+        <button class="chip-preset active" data-preset="tokyonight"
+                data-r1="#7aa2f7" data-r2="#bb9af3" data-r3="#7dcfff">Tokyo Night</button>
+        <button class="chip-preset" data-preset="aurora"
+                data-r1="#88c0d0" data-r2="#5e81ac" data-r3="#81a1c1">Aurora</button>
+        <button class="chip-preset" data-preset="sunset"
+                data-r1="#f7768e" data-r2="#ff9e64" data-r3="#e0af68">Sunset</button>
+        <button class="chip-preset" data-preset="forest"
+                data-r1="#9ece6a" data-r2="#41a6b5" data-r3="#73daca">Forest</button>
+        <button class="chip-preset" data-preset="rose"
+                data-r1="#f38ba8" data-r2="#cba6f7" data-r3="#89b4fa">Catppuccin</button>
+      </div>
+    </div>
+
+    <!-- ── Thinking Controls ── -->
+    <div class="control-group hidden" id="ctrl-thinking">
+      <div class="control-section-label">Spinner Animation</div>
+      <div class="control-row">
+        <label class="ctrl-label">Spin speed</label>
+        <div class="ctrl-slider-row">
+          <input type="range" id="th-spin" min="0.8" max="5" step="0.2" value="2.4" class="slider"/>
+          <span class="slider-value" id="th-spin-val">2.4s</span>
+        </div>
+      </div>
+
+      <div class="control-section-label" style="margin-top:16px;">Sweep Color</div>
+      <div class="control-row">
+        <label class="ctrl-label">Sweep / glow</label>
+        <input type="color" value="#22d3ee" class="color-picker" id="th-sweep"/>
+      </div>
+
+      <div class="control-section-label" style="margin-top:16px;">Color Presets</div>
+      <div class="chip-row" style="flex-wrap:wrap; gap:6px;">
+        <button class="chip active" data-color="#22d3ee" data-picker="th-sweep">Cyan</button>
+        <button class="chip" data-color="#7aa2f7" data-picker="th-sweep">Blue</button>
+        <button class="chip" data-color="#bb9af3" data-picker="th-sweep">Purple</button>
+        <button class="chip" data-color="#9ece6a" data-picker="th-sweep">Green</button>
+        <button class="chip" data-color="#f7768e" data-picker="th-sweep">Red</button>
+        <button class="chip" data-color="#ff9e64" data-picker="th-sweep">Orange</button>
+      </div>
+    </div>
+
+    <!-- ── Generic Controls (api_docs, footer, ask_me_badge, headers) ── -->
+    <div class="control-group hidden" id="ctrl-generic">
+      <div class="ctrl-generic-msg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7aa2f7" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <p>This component uses theme-based defaults.<br/>Use <strong>Build All</strong> to regenerate with current settings.</p>
+      </div>
+    </div>
+
+    <!-- Action buttons -->
+    <div class="ctrl-actions">
+      <button class="btn-preview" id="previewBtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        Preview
+      </button>
+      <button class="btn-build-comp" id="buildComponentBtn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        Build Component
+      </button>
+    </div>
+  </aside>
+</div>
+
+<!-- Build All modal -->
+<div class="modal-overlay" id="buildModal" style="display:none;">
+  <div class="modal">
+    <div class="modal-icon">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9ece6a" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h3 class="modal-title">Build Complete!</h3>
+    <p class="modal-msg" id="modalMsg">All SVG assets have been regenerated.</p>
+    <button class="btn-modal-close" id="modalClose">Done</button>
+  </div>
+</div>
+
+<script src="/static/js/app.js"></script>
+</body>
+</html>
