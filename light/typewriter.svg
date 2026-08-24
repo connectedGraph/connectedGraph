@@ -207,31 +207,31 @@
   <g clip-path="url(#terminal-clip)">
     <!-- Line 1: greet command -->
     <text x="35" y="62" class="code-text prompt">euler~% </text>
-  <text x="105" y="62" class="code-text command">greet <tspan class="flag">--role</tspan> <tspan class="string">"CS Freshman"</tspan></text>
+  <text x="105" y="62" class="code-text command">whoami <tspan class="flag">--brief</tspan></text>
   <rect x="105" y="48" width="230" height="20" fill="#f6f8fa" class="mask-rect-1"/>
   <rect x="105" y="48" width="8" height="16" class="cursor cursor1"/>
   
   <!-- Line 2: greet output -->
-  <text x="35" y="85" class="output op1">Hi, CS Freshman here! Nice to meet you. 👋</text>
+  <text x="35" y="85" class="output op1">计算机专业学生 · 全栈 AI 应用开发者</text>
   
   <!-- Line 3: show-profile command -->
   <text x="35" y="108" class="code-text prompt pr2">euler~% </text>
-  <text x="105" y="108" class="code-text command">show-profile</text>
+  <text x="105" y="108" class="code-text command">show-focus</text>
   <rect x="105" y="94" width="105" height="20" fill="#f6f8fa" class="mask-rect-2"/>
   <rect x="105" y="94" width="8" height="16" class="cursor cursor2"/>
   
   <!-- Line 4 & 5: show-profile outputs -->
-  <text x="35" y="131" class="output op2">Focus:  Full-Stack AI Applications (Vertical AIED)</text>
-  <text x="35" y="154" class="output op3">Status: yolo</text>
+  <text x="35" y="131" class="output op2">方向：中文场景的 AI 工具、教育产品与实用应用</text>
+  <text x="35" y="154" class="output op3">Focus: AI tools, AIED, and product engineering</text>
   
-  <!-- Line 6: claude command -->
+  <!-- Line 6: featured projects command -->
   <text x="35" y="177" class="code-text prompt pr3">euler~% </text>
-  <text x="105" y="177" class="code-text command">claude <tspan class="flag">--dangerously-skip-permissions</tspan></text>
+  <text x="105" y="177" class="code-text command">projects <tspan class="flag">--featured</tspan></text>
   <rect x="105" y="163" width="335" height="20" fill="#f6f8fa" class="mask-rect-3"/>
   <rect x="105" y="163" width="8" height="16" class="cursor cursor3"/>
   
-  <!-- Line 7: claude output -->
-  <text x="35" y="200" class="output op4" fill="#6f42c1">[Danger Mode] Skipping permissions... Let's build!</text>
+  <!-- Line 7: featured projects output -->
+  <text x="35" y="200" class="output op4" fill="#6f42c1">RoleFit · 知乎沉浸阅读 · trae2api-web</text>
   
   <!-- Line 8: codex command -->
   <text x="35" y="223" class="code-text prompt pr4">euler~% </text>

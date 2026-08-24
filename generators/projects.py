@@ -1,16 +1,16 @@
 import os
 
 DEFAULT_PROJECTS = [
-    {"name": "Zhihu Immersive Reader",  "url": "https://6767.chat/zhihu-immersive-reader/",
-     "status": "Live",  "desc": "Immersive reading script for Zhihu, featuring ad-blocking, AI summaries, and Markdown exports."},
-    {"name": "Sanguosha Voice & Lines", "url": "https://6767.chat/sgs",
-     "status": "Live",  "desc": "Interactive quote library for Sanguosha game, featuring dialogue search, audio playback, and admin panel."},
-    {"name": "AIED DuoGrow SaaS",       "url": "https://github.com/connectedGraph/AIED-DuoGrow-SaaS",
-     "status": "Build", "desc": "Lightweight English learning web app with parent-child feedback loops and AI grading."},
-    {"name": "BrightlyPk",              "url": "https://github.com/connectedGraph/BrightlyPk",
-     "status": "Lab",   "desc": "Node.js + WebSocket powered real-time multiplayer trivia competition platform."},
-    {"name": "Deepseek Unofficial API", "url": "https://github.com/connectedGraph/Deepseek-unofficial-API",
-     "status": "Lab",   "desc": "Node.js library wrapper for Deepseek Expert Mode."},
+    {"name": "RoleFit · 职途星", "url": "https://github.com/connectedGraph/RoleFit",
+     "status": "Build", "desc": "面向中文招聘数据的可解释智能人岗匹配系统 / Explainable AI job matching for Chinese recruitment data."},
+    {"name": "知乎沉浸阅读", "url": "https://6767.chat/zhihu-immersive-reader/",
+     "status": "Live", "desc": "知乎纯净阅读、AI 总结与 Markdown 导出 / Immersive Zhihu reading with AI summaries and exports."},
+    {"name": "trae2api-web", "url": "https://github.com/connectedGraph/trae2api-web",
+     "status": "Live", "desc": "TRAE SOLO 的 OpenAI 兼容代理与中文管理面板 / OpenAI-compatible proxy with a web console."},
+    {"name": "三国杀台词鉴赏馆", "url": "https://6767.chat/sgs",
+     "status": "Live", "desc": "台词检索、古文解析与语音播放 / Searchable Sanguosha quotes, annotations, and audio."},
+    {"name": "DeepSeek 非官方 API", "url": "https://github.com/connectedGraph/Deepseek-unofficial-API",
+     "status": "Lab", "desc": "支持专家模式的非官方接口实验 / Unofficial API experiments for DeepSeek Expert Mode."},
 ]
 
 def _esc(s):
