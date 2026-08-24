@@ -1,10 +1,7 @@
 <div align="center">
 
 <!-- Avatar -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./dark/avatar_animated.svg">
-  <img alt="Euler Rap Animated Avatar" src="./light/avatar_animated.svg" width="160" height="160">
-</picture>
+<img alt="Euler Rap" src="https://q1.qlogo.cn/g?b=qq&nk=1808666025&s=640" width="160" height="160" style="border-radius: 50%;">
 
 ### Hi there, I'm **Euler Rap** (connectedGraph) 👋
 
@@ -112,14 +109,6 @@ POST https://6767.chat/api/speech-score       → Youdao speech assessment proxy
   </picture>
 </div>
 
-<br/>
-
-<div align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=connectedGraph&theme=tokyonight&hide_border=true&background=1a1b26&ring=7aa2f7&fire=f7768e&currStreakLabel=a9b1d6">
-    <img alt="Streak Stats" src="https://streak-stats.demolab.com?user=connectedGraph&theme=default&hide_border=true" width="100%" style="max-width: 800px; border-radius: 10px;">
-  </picture>
-</div>
 
 ---
 

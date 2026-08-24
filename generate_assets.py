@@ -5,7 +5,6 @@ from generators.badges import generate_social_badges
 from generators.tech_stack import generate_tech_stack
 from generators.projects import generate_projects
 from generators.thinking import generate_thinking_header
-from generators.avatar import generate_avatar
 from generators.api_docs import generate_api_docs
 from generators.footer import generate_footer
 from generators.ask_me_badge import generate_ask_me_badge
@@ -35,7 +34,6 @@ def main():
         generate_tech_stack(output_dir=theme, theme=theme)
         generate_projects(output_dir=theme, theme=theme)
         generate_thinking_header(output_dir=theme, theme=theme)
-        generate_avatar(output_dir=theme, theme=theme)
         generate_api_docs(output_dir=theme, theme=theme)
         generate_footer(output_dir=theme, theme=theme)
         generate_ask_me_badge(output_dir=theme, theme=theme)
