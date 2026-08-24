@@ -243,7 +243,7 @@ def generate_typewriter(output_dir=".", theme="dark", **kwargs):
   <rect x="105" y="48" width="8" height="16" class="cursor cursor1"/>
   
   <!-- Line 2: greet output -->
-  <text x="35" y="85" class="output op1">计算机专业学生 · 全栈 AI 应用开发者</text>
+  <text x="35" y="85" class="output op1">CS Student · Full-Stack AI Application Developer</text>
   
   <!-- Line 3: show-profile command -->
   <text x="35" y="108" class="code-text prompt pr2">euler~% </text>
@@ -252,8 +252,8 @@ def generate_typewriter(output_dir=".", theme="dark", **kwargs):
   <rect x="105" y="94" width="8" height="16" class="cursor cursor2"/>
   
   <!-- Line 4 & 5: show-profile outputs -->
-  <text x="35" y="131" class="output op2">方向：中文场景的 AI 工具、教育产品与实用应用</text>
-  <text x="35" y="154" class="output op3">Focus: AI tools, AIED, and product engineering</text>
+  <text x="35" y="131" class="output op2">Focus: AI Tools, AIED, and Product Engineering</text>
+  <text x="35" y="154" class="output op3">Building useful products for real-world workflows</text>
   
   <!-- Line 6: featured projects command -->
   <text x="35" y="177" class="code-text prompt pr3">euler~% </text>
@@ -262,7 +262,7 @@ def generate_typewriter(output_dir=".", theme="dark", **kwargs):
   <rect x="105" y="163" width="8" height="16" class="cursor cursor3"/>
   
   <!-- Line 7: featured projects output -->
-  <text x="35" y="200" class="output op4" fill="{danger_op_color}">RoleFit · 知乎沉浸阅读 · trae2api-web</text>
+  <text x="35" y="200" class="output op4" fill="{danger_op_color}">RoleFit · Zhihu Immersive Reader · trae2api-web</text>
   
   <!-- Line 8: codex command -->
   <text x="35" y="223" class="code-text prompt pr4">euler~% </text>
