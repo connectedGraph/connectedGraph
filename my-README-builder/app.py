@@ -6,7 +6,6 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, ROOT)
 
 from generators.typewriter   import generate_typewriter
-from generators.avatar       import generate_avatar
 from generators.thinking     import generate_thinking_header
 from generators.badges       import generate_social_badges
 from generators.tech_stack   import generate_tech_stack
@@ -15,6 +14,8 @@ from generators.headers      import generate_header
 from generators.api_docs     import generate_api_docs
 from generators.footer       import generate_footer
 from generators.ask_me_badge import generate_ask_me_badge
+from generators.github_stats import generate_stats_card, generate_activity_graph
+from fetchers.github_stats   import load as load_stats
 
 app = Flask(__name__)
 
@@ -34,13 +35,14 @@ HEADER_ICONS = {
 
 COMPONENT_FILES = {
     "typewriter":         "typewriter.svg",
-    "avatar":             "avatar_animated.svg",
     "thinking":           "thinking_header.svg",
     "tech_stack":         "tech_stack.svg",
     "projects":           "projects.svg",
     "api_docs":           "api_docs.svg",
     "footer":             "footer.svg",
     "ask_me_badge":       "ask_me_badge.svg",
+    "github_stats":       "github_stats.svg",
+    "activity_graph":     "activity_graph.svg",
     "header_tech_stack":  "header_tech_stack.svg",
     "header_projects":    "header_projects.svg",
     "header_public_apis": "header_public_apis.svg",
@@ -67,8 +69,6 @@ def _build_component(component, theme, params, out_dir):
 
     if component == "typewriter":
         generate_typewriter(output_dir=out_dir, theme=theme, **(params or {}))
-    elif component == "avatar":
-        generate_avatar(output_dir=out_dir, theme=theme, **(params or {}))
     elif component == "thinking":
         generate_thinking_header(output_dir=out_dir, theme=theme, **(params or {}))
     elif component == "badges":
@@ -83,6 +83,10 @@ def _build_component(component, theme, params, out_dir):
         generate_footer(output_dir=out_dir, theme=theme)
     elif component == "ask_me_badge":
         generate_ask_me_badge(output_dir=out_dir, theme=theme)
+    elif component == "github_stats":
+        generate_stats_card(output_dir=out_dir, theme=theme, stats=load_stats())
+    elif component == "activity_graph":
+        generate_activity_graph(output_dir=out_dir, theme=theme, stats=load_stats())
     elif component.startswith("header_"):
         key = component[len("header_"):]
         label = key.replace("_", " ").title()
@@ -197,8 +201,11 @@ def build_all():
         # Single components — write to BOTH the project root and preview cache.
         for target in (out_dir, preview_theme_dir):
             generate_typewriter(output_dir=target, theme=theme, **params.get("typewriter", {}))
-            generate_avatar(output_dir=target, theme=theme, **params.get("avatar", {}))
             generate_thinking_header(output_dir=target, theme=theme, **params.get("thinking", {}))
+
+            stats = load_stats()
+            generate_stats_card(output_dir=target, theme=theme, stats=stats)
+            generate_activity_graph(output_dir=target, theme=theme, stats=stats)
 
             generate_social_badges(output_dir=target, theme=theme)
             generate_tech_stack(output_dir=target, theme=theme, **params.get("tech_stack", {}))
@@ -244,7 +251,6 @@ def all_previews():
 def defaults():
     return jsonify({
         "typewriter": {"animation_duration": 12},
-        "avatar":     {"ring_color_1": "#7aa2f7", "ring_color_2": "#bb9af3", "ring_color_3": "#7dcfff", "pulse_duration": 4},
         "thinking":   {"sweep_color": "#22d3ee", "spin_duration": 2.4},
     })
 

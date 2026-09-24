@@ -37,7 +37,6 @@ const state = {
   previewMode: 'both',                  // both | dark | light
   params: {
     typewriter: {animation_duration: 12},
-    avatar:     {ring_color_1: '#7aa2f7', ring_color_2: '#bb9af3', ring_color_3: '#7dcfff', pulse_duration: 4},
     thinking:   {sweep_color: '#22d3ee', spin_duration: 2.4},
     tech_stack: {categories: deepClone(DEFAULT_TS_CATS)},
     projects:   {projects: deepClone(DEFAULT_PROJECTS)},
@@ -48,13 +47,14 @@ const state = {
 const COMPONENT_LABELS = {
   overview:            'Overview',
   typewriter:          'Terminal Animation',
-  avatar:              'Avatar',
   thinking:            'Thinking UI',
   tech_stack:          'Tech Stack',
   projects:            'Projects',
   api_docs:            'API Docs Card',
   footer:              'Footer',
   ask_me_badge:        'Ask Me Badge',
+  github_stats:        'GitHub Stats Card',
+  activity_graph:      'Activity Graph',
   header_tech_stack:   'Header · Tech Stack',
   header_projects:     'Header · Projects',
   header_public_apis:  'Header · Public APIs',
@@ -64,8 +64,9 @@ const COMPONENT_LABELS = {
 };
 
 const OVERVIEW_GROUPS = [
-  {label: 'Hero', items: ['typewriter', 'avatar', 'thinking']},
+  {label: 'Hero', items: ['typewriter', 'thinking']},
   {label: 'Sections', items: ['tech_stack', 'projects', 'api_docs', 'ask_me_badge', 'footer']},
+  {label: 'GitHub Stats', items: ['github_stats', 'activity_graph']},
   {label: 'Headers', items: ['header_tech_stack', 'header_projects', 'header_public_apis',
                              'header_stats', 'header_roadmap', 'header_ask_me']},
 ];
@@ -99,7 +100,6 @@ function showControls(component) {
   const map = {
     overview:   'ctrl-overview',
     typewriter: 'ctrl-typewriter',
-    avatar:     'ctrl-avatar',
     thinking:   'ctrl-thinking',
     tech_stack: 'ctrl-tech_stack',
     projects:   'ctrl-projects',
@@ -168,7 +168,6 @@ function wireSlider(sliderId, valId, paramKey, key, suffix = 's', decimals = 0) 
   });
 }
 wireSlider('tw-duration', 'tw-duration-val', 'typewriter', 'animation_duration', 's');
-wireSlider('av-pulse',    'av-pulse-val',    'avatar',     'pulse_duration',     's', 1);
 
 const thSpin = $('th-spin');
 if (thSpin) {
@@ -181,15 +180,6 @@ if (thSpin) {
 }
 
 // ── Color pickers ──────────────────────────────────────────────────────────────
-['av-ring1', 'av-ring2', 'av-ring3'].forEach((id, i) => {
-  const el = $(id);
-  if (!el) return;
-  el.addEventListener('input', () => {
-    state.params.avatar[`ring_color_${i + 1}`] = el.value;
-    debouncedPreview();
-  });
-});
-
 const thSweep = $('th-sweep');
 if (thSweep) {
   thSweep.addEventListener('input', () => {
@@ -222,20 +212,6 @@ $$('.chip[data-color]').forEach(chip => {
     chip.classList.add('active');
   });
 });
-$$('.chip-preset').forEach(chip => {
-  chip.addEventListener('click', () => {
-    const set = (id, v) => {
-      const el = $(id);
-      if (el) { el.value = v; el.dispatchEvent(new Event('input')); }
-    };
-    set('av-ring1', chip.dataset.r1);
-    set('av-ring2', chip.dataset.r2);
-    set('av-ring3', chip.dataset.r3);
-    $$('.chip-preset').forEach(s => s.classList.remove('active'));
-    chip.classList.add('active');
-  });
-});
-
 // ── Single-component preview ───────────────────────────────────────────────────
 function setLoading(c) {
   c.innerHTML = `<div class="preview-placeholder"><div class="spinner"></div><span>Generating...</span></div>`;

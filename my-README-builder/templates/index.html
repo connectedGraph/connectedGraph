@@ -53,10 +53,6 @@
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
         Terminal
       </button>
-      <button class="nav-item" data-component="avatar">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        Avatar
-      </button>
       <button class="nav-item" data-component="thinking">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         Thinking UI
@@ -80,6 +76,14 @@
       <button class="nav-item" data-component="ask_me_badge">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
         Ask Me Badge
+      </button>
+      <button class="nav-item" data-component="github_stats">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        GitHub Stats
+      </button>
+      <button class="nav-item" data-component="activity_graph">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 17 9 11 13 15 21 7"/></svg>
+        Activity Graph
       </button>
     </nav>
 
@@ -173,41 +177,6 @@
           <button class="chip active" data-val="12" data-target="tw-duration">Normal</button>
           <button class="chip" data-val="20" data-target="tw-duration">Slow</button>
         </div>
-      </div>
-    </div>
-
-    <!-- ── Avatar Controls ── -->
-    <div class="control-group hidden" id="ctrl-avatar">
-      <div class="control-section-label">Pulse Animation</div>
-      <div class="control-row">
-        <label class="ctrl-label">Pulse speed</label>
-        <div class="ctrl-slider-row">
-          <input type="range" id="av-pulse" min="1.5" max="8" step="0.5" value="4" class="slider"/>
-          <span class="slider-value" id="av-pulse-val">4s</span>
-        </div>
-      </div>
-
-      <div class="control-section-label" style="margin-top:16px;">Ring Colors</div>
-      <div class="control-row">
-        <label class="ctrl-label">Ring 1 (inner)</label>
-        <input type="color" value="#7aa2f7" class="color-picker" id="av-ring1"/>
-      </div>
-      <div class="control-row">
-        <label class="ctrl-label">Ring 2 (mid)</label>
-        <input type="color" value="#bb9af3" class="color-picker" id="av-ring2"/>
-      </div>
-      <div class="control-row">
-        <label class="ctrl-label">Ring 3 (outer)</label>
-        <input type="color" value="#7dcfff" class="color-picker" id="av-ring3"/>
-      </div>
-
-      <div class="control-section-label" style="margin-top:16px;">Color Presets</div>
-      <div class="chip-row">
-        <button class="chip-preset active" data-r1="#7aa2f7" data-r2="#bb9af3" data-r3="#7dcfff">Tokyo Night</button>
-        <button class="chip-preset" data-r1="#88c0d0" data-r2="#5e81ac" data-r3="#81a1c1">Aurora</button>
-        <button class="chip-preset" data-r1="#f7768e" data-r2="#ff9e64" data-r3="#e0af68">Sunset</button>
-        <button class="chip-preset" data-r1="#9ece6a" data-r2="#41a6b5" data-r3="#73daca">Forest</button>
-        <button class="chip-preset" data-r1="#f38ba8" data-r2="#cba6f7" data-r3="#89b4fa">Catppuccin</button>
       </div>
     </div>
 
