@@ -8,6 +8,8 @@ from generators.thinking import generate_thinking_header
 from generators.api_docs import generate_api_docs
 from generators.footer import generate_footer
 from generators.ask_me_badge import generate_ask_me_badge
+from generators.github_stats import generate_stats_card, generate_activity_graph
+from fetchers.github_stats import load as load_stats
 
 def main():
     # Icons for section headers (Tokyo Night theme gradients)
@@ -17,6 +19,11 @@ def main():
     stats_path = '<path d="M18 20V10M12 20V4M6 20v-6" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" fill="none"/>'
     roadmap_path = '<path d="M9 6h11M9 12h11M9 18h11M5 6v.01M5 12v.01M5 18v.01" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" fill="none"/>'
     ask_path = '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="url(#header-grad)" stroke-width="2.5" stroke-linecap="round" fill="none"/>'
+
+    # GitHub stats come from a committed cache; the fetcher refreshes it.
+    stats = load_stats()
+    if not stats:
+        print("No data/github_stats.json yet, rendering the stats cards with placeholders")
 
     for theme in ["dark", "light"]:
         print(f"\n--- Generating assets for {theme.upper()} theme ---")
@@ -37,6 +44,8 @@ def main():
         generate_api_docs(output_dir=theme, theme=theme)
         generate_footer(output_dir=theme, theme=theme)
         generate_ask_me_badge(output_dir=theme, theme=theme)
+        generate_stats_card(output_dir=theme, theme=theme, stats=stats)
+        generate_activity_graph(output_dir=theme, theme=theme, stats=stats)
 
 if __name__ == "__main__":
     main()

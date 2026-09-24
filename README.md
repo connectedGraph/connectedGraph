@@ -104,8 +104,13 @@ POST https://6767.chat/api/speech-score       → Youdao speech assessment proxy
 
 <div align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-activity-graph.vercel.app/graph?username=connectedGraph&theme=tokyo-night&hide_border=true&area=true">
-    <img alt="Activity Graph" src="https://github-readme-activity-graph.vercel.app/graph?username=connectedGraph&theme=github-light-default&hide_border=true&area=true" width="100%" style="max-width: 800px; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
+    <source media="(prefers-color-scheme: dark)" srcset="./dark/github_stats.svg">
+    <img alt="GitHub Stats" src="./light/github_stats.svg" width="100%" style="max-width: 750px;">
+  </picture>
+  <br/>
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./dark/activity_graph.svg">
+    <img alt="Contribution Activity" src="./light/activity_graph.svg" width="100%" style="max-width: 750px;">
   </picture>
 </div>
 
