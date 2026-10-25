@@ -12,10 +12,10 @@
 
   <rect x="15" y="15" width="720" height="210" rx="12" fill="#1a1b26" stroke="#24283b" stroke-width="1.5" filter="url(#shadow)"/>
 
-  <text x="127.5" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#7aa2f7" text-anchor="middle">1,517</text>
+  <text x="127.5" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#7aa2f7" text-anchor="middle">1,522</text>
   <text x="127.5" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#565f89" letter-spacing="0.8" text-anchor="middle">CONTRIBUTIONS</text>
   <line x1="210.0" y1="46" x2="210.0" y2="90" stroke="#24283b" stroke-width="1"/>
-  <text x="292.5" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#9ece6a" text-anchor="middle">0<tspan font-size="15" font-weight="700"> days</tspan></text>
+  <text x="292.5" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#9ece6a" text-anchor="middle">1<tspan font-size="15" font-weight="700"> day</tspan></text>
   <text x="292.5" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#565f89" letter-spacing="0.8" text-anchor="middle">CURRENT STREAK</text>
   <line x1="375.0" y1="46" x2="375.0" y2="90" stroke="#24283b" stroke-width="1"/>
   <text x="457.5" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#e0af68" text-anchor="middle">22<tspan font-size="15" font-weight="700"> days</tspan></text>
@@ -23,30 +23,30 @@
   <line x1="540.0" y1="46" x2="540.0" y2="90" stroke="#24283b" stroke-width="1"/>
   <text x="622.5" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="30" font-weight="800" fill="#bb9af3" text-anchor="middle">146</text>
   <text x="622.5" y="90" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#565f89" letter-spacing="0.8" text-anchor="middle">STARS EARNED</text>
-  <text x="45.0" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#7dcfff">91</text>
+  <text x="45.0" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#7dcfff">92</text>
   <text x="72.4" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="11.5" font-weight="600" fill="#565f89">Repositories</text>
   <text x="189.2" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="17" font-weight="800" fill="#7aa2f7">12</text>
   <text x="216.6" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="11.5" font-weight="600" fill="#565f89">Followers</text>
-  <text x="705" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" fill="#565f89" text-anchor="end">updated 2026-10-24</text>
+  <text x="705" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" fill="#565f89" text-anchor="end">updated 2026-10-25</text>
   <text x="45" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" font-weight="700" fill="#565f89" letter-spacing="0.8">LANGUAGES</text>
   <clipPath id="lang-clip"><rect x="45" y="178" width="660" height="10" rx="5.0"/></clipPath>
   <rect x="45" y="178" width="660" height="10" rx="5.0" fill="#16161e" stroke="#24283b" stroke-width="1"/>
   <g clip-path="url(#lang-clip)" stroke="#1a1b26" stroke-width="2">
-    <rect x="45.00" y="178" width="258.72" height="10" fill="#dea584"/>
-    <rect x="303.72" y="178" width="193.38" height="10" fill="#f1e05a"/>
-    <rect x="497.10" y="178" width="58.74" height="10" fill="#e34c26"/>
-    <rect x="555.84" y="178" width="52.80" height="10" fill="#3178c6"/>
+    <rect x="45.00" y="178" width="258.06" height="10" fill="#dea584"/>
+    <rect x="303.06" y="178" width="192.72" height="10" fill="#f1e05a"/>
+    <rect x="495.78" y="178" width="58.74" height="10" fill="#e34c26"/>
+    <rect x="554.52" y="178" width="54.12" height="10" fill="#3178c6"/>
     <rect x="608.64" y="178" width="52.14" height="10" fill="#3572A5"/>
     <rect x="660.78" y="178" width="44.22" height="10" fill="#565f89"/>
   </g>
   <circle cx="49.0" cy="204.5" r="4" fill="#dea584"/>
-  <text x="60.0" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" fill="#c0caf5">Rust <tspan fill="#565f89">39.2%</tspan></text>
+  <text x="60.0" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" fill="#c0caf5">Rust <tspan fill="#565f89">39.1%</tspan></text>
   <circle cx="159.0" cy="204.5" r="4" fill="#f1e05a"/>
-  <text x="170.0" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" fill="#c0caf5">JavaScript <tspan fill="#565f89">29.3%</tspan></text>
+  <text x="170.0" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" fill="#c0caf5">JavaScript <tspan fill="#565f89">29.2%</tspan></text>
   <circle cx="269.0" cy="204.5" r="4" fill="#e34c26"/>
   <text x="280.0" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" fill="#c0caf5">HTML <tspan fill="#565f89">8.9%</tspan></text>
   <circle cx="379.0" cy="204.5" r="4" fill="#3178c6"/>
-  <text x="390.0" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" fill="#c0caf5">TypeScript <tspan fill="#565f89">8.0%</tspan></text>
+  <text x="390.0" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" fill="#c0caf5">TypeScript <tspan fill="#565f89">8.2%</tspan></text>
   <circle cx="489.0" cy="204.5" r="4" fill="#3572A5"/>
   <text x="500.0" y="208" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" font-size="10.5" fill="#c0caf5">Python <tspan fill="#565f89">7.9%</tspan></text>
   <circle cx="599.0" cy="204.5" r="4" fill="#565f89"/>
